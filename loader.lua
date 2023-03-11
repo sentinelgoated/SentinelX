@@ -361,6 +361,13 @@ local DetectionScripts = {
 		Premium = false,
 		Loadstring = "https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife",
 	},
+	Owl Hub = {
+		Name = "Owl Hub",
+		Description = "One of the most popular script hubs to date, with little compromise.",
+		Games = {286090429,3759927663,137885680,983224898,1899149341},
+		Premium = false,
+		Loadstring = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt",
+	},
 	andestsim = {
 		Name = "Anime Destroyer Simulator",
 		Description = "This script is a community submitted script, we have no info on it",
