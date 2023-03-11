@@ -360,7 +360,7 @@ local DetectionScripts = {
 		Games = {155615604},
 		Premium = false,
 		Loadstring = "https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife",
-	},,
+	},
 	andestsim = {
 		Name = "Anime Destroyer Simulator",
 		Description = "This script is a community submitted script, we have no info on it",
