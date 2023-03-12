@@ -99,7 +99,7 @@
  -- DMNX
  
  
- local Sentinel = game:GetObjects("rbxassetid://12726696203")[1]
+ local Sentinel = game:GetObjects("rbxassetid://12766870530")[1]
  
  if DebugMode then
      warn("SentinelX - Loaded Main UI")
