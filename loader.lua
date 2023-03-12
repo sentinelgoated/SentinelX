@@ -4000,12 +4000,12 @@ end
 
 function BootDomainX()
 	if DebugMode then
-		warn("DomainX - Beginning Boot Process")
+		warn("SentinelX - Beginning Boot Process")
 	end
 	Domain.Main.Visible = true
 	Domain.Main.Position = UDim2.new(0.5, 0, 1.05, 0)
 	Domain.Main.KeybindNote.Position = UDim2.new(0.5,0,-1.303,0)
-	Domain.Main.KeybindNote.Text = "Loading DomainX"
+	Domain.Main.KeybindNote.Text = "Loading SentinelX"
 	Domain.Main.KeybindNote.Visible = true
 	Domain.Main.Buttons.ModulesButton.Visible = false
 	Domain.Main.KeybindNote.TextTransparency = 0.4
@@ -4023,14 +4023,14 @@ function BootDomainX()
 	UpdateExecutor()
 
 	if not DomainEnabled then
-		Notify("Not Enabled","Domain X is currently disabled",4384402990)
+		Notify("Not Enabled","SentinelX is currently disabled",4384402990)
 		wait(NotificationDuration+3)
 		Domain:Destroy()
 		return
 	end
 
 	if DebugMode then
-		warn("DomainX - Continuing Boot Process")
+		warn("SentinelX - Continuing Boot Process")
 	end
 	ContinueBoot()
 
@@ -4148,7 +4148,7 @@ end
 function Invisible()
 	if invisRunning then return end
 	invisRunning = true
-	-- Full credit to AmokahFox @V3rmillion
+	-- Full credit to wSentinal @V3rmillion
 	local Player = LocalPlayer
 	repeat wait(.1) until Player.Character
 	local Character = Player.Character
@@ -4961,7 +4961,7 @@ end)()
 
 coroutine.wrap(function()
 	wait(1000)
-	Toast("Enjoying DomainX? Let us know in our Discord!")
+	Toast("Enjoying SentinelX? Let us know in our Discord!")
 	Toast(DiscordLink,"GothamBold")
 end)()
 
