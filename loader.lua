@@ -99,7 +99,7 @@
  -- DMNX
  
  
- local Setinel = game:GetObjects("rbxassetid://12726696203")[1]
+ local Sentinel = game:GetObjects("rbxassetid://12726696203")[1]
  
  if DebugMode then
      warn("SentinelX - Loaded Main UI")
@@ -109,12 +109,12 @@
  
  if not gethui then
      if syn and syn.protect_gui then
-         syn.protect_gui(Setinel)
+         syn.protect_gui(Sentinel)
          protected = true
      end
  
      if protect_gui then
-         protect_gui(Setinel)
+         protect_gui(Sentinel)
          protected = true
      end
      parent = game:GetService("CoreGui")
@@ -126,20 +126,20 @@
      warn("SentinelX - Protected Main UI")
  end
  
- Setinel.Parent = parent
- Setinel.Main.Visible = true
- Setinel.Main.Position = UDim2.new(0.5, 0, 1.05, 0)
- Setinel.Main.KeybindNote.Position = UDim2.new(0.5,0,-1.303,0)
- Setinel.Main.KeybindNote.Text = "Starting"
- Setinel.Main.KeybindNote.Visible = true
- Setinel.Main.KeybindNote.TextTransparency = 0.4
+ Sentinel.Parent = parent
+ Sentinel.Main.Visible = true
+ Sentinel.Main.Position = UDim2.new(0.5, 0, 1.05, 0)
+ Sentinel.Main.KeybindNote.Position = UDim2.new(0.5,0,-1.303,0)
+ Sentinel.Main.KeybindNote.Text = "Starting"
+ Sentinel.Main.KeybindNote.Visible = true
+ Sentinel.Main.KeybindNote.TextTransparency = 0.4
  wait(0.2)
  
  local DefaultKeybind = "K"
  local DiscordLink = "https://discord.gg/5b4VDfcQVc"
  local DiscordLink2 = "5b4VDfcQVc"
  local NotificationDuration = 7
- local SetinelEnabled = true
+ local SentinelEnabled = true
  local Price = "$7.99"
  local CustomFolderName = "SentinelX Custom Scripts"
  local KeyWaitTime = 60
@@ -197,7 +197,7 @@
  local SnowHubSupported = false
  local plrconopen = false
  local CustomScripts = {}
- local SetinelXLoaded = false
+ local SentinelXLoaded = false
  local playerservice = game:GetService("Players")
  local plrlistopen = false
  local baropen = false
@@ -323,7 +323,7 @@
          Description = "A SentinelX exclusive, by our developer, Urbanstorm",
          Games = {71315343},
          Premium = false,
-         Loadstring = "https://raw.githubusercontent.com/Urbanstorms/SetinelX/main/DBR.lua",
+         Loadstring = "https://raw.githubusercontent.com/Urbanstorms/SentinelX/main/DBR.lua",
      },
      Vega = {
          Name = "Vega Remover",
@@ -811,7 +811,7 @@
      PreviousElegance("b")
  end)
  
- Sentinel .Main.MouseLeave:Connect(function()
+ Sentinel.Main.MouseLeave:Connect(function()
      if scriptsopen or plrlistopen or plrconopen then 
          return
      end
@@ -1438,7 +1438,7 @@
          ClosePlayerConfig()
          plrconopen = false
      end
-     for _, AddedScript in ipairs(Setinel.Scripts.List:GetChildren()) do
+     for _, AddedScript in ipairs(Sentinel.Scripts.List:GetChildren()) do
          if AddedScript:IsA("Frame") and AddedScript.Name ~= "Template" then
              AddedScript.BackgroundTransparency = 1
              AddedScript.TextButton.BackgroundTransparency = 1
@@ -1449,35 +1449,35 @@
          end
      end
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.56, 0)})
+     local tween = TweenService:Create(Sentinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.56, 0)})
      tween:Play()
-     Setinel.Scripts.Title.TextTransparency = 1
-     Setinel.Scripts.Size = UDim2.new(0.278,0,0.189,0)
-     Setinel.Scripts.Position = UDim2.new(0.5,0,0.81,0)
-     Setinel.Scripts.BackgroundTransparency = 1
-     Setinel.Scripts.Divider.Size = UDim2.new(0,0,0.007,0)
-     Setinel.Scripts.Visible = true
+     Sentinel.Scripts.Title.TextTransparency = 1
+     Sentinel.Scripts.Size = UDim2.new(0.278,0,0.189,0)
+     Sentinel.Scripts.Position = UDim2.new(0.5,0,0.81,0)
+     Sentinel.Scripts.BackgroundTransparency = 1
+     Sentinel.Scripts.Divider.Size = UDim2.new(0,0,0.007,0)
+     Sentinel.Scripts.Visible = true
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {Position = UDim2.new(0.5,0,0.81,0)})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {Position = UDim2.new(0.5,0,0.81,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Title, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Scripts.Title, transitionInfo, {TextTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Shadow, transitionInfo, {ImageTransparency = 0.8})
+     local tween = TweenService:Create(Sentinel.Scripts.Shadow, transitionInfo, {ImageTransparency = 0.8})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {Size = UDim2.new(0.296,0,0.201,0)})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {Size = UDim2.new(0.296,0,0.201,0)})
      tween:Play()
      wait(0.01)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Divider, transitionInfo, {Size = UDim2.new(1,0,0.007,0)})
+     local tween = TweenService:Create(Sentinel.Scripts.Divider, transitionInfo, {Size = UDim2.new(1,0,0.007,0)})
      tween:Play()
-     for _, AddedScript in ipairs(Setinel.Scripts.List:GetChildren()) do
+     for _, AddedScript in ipairs(Sentinel.Scripts.List:GetChildren()) do
          if AddedScript:IsA("Frame") and AddedScript.Name ~= "Template" then
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(AddedScript, transitionInfo, {BackgroundTransparency = 0})
@@ -1511,14 +1511,14 @@
      db = true
      if not ThemeEnabled then
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.ScriptsButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.ScriptsButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.ScriptsButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.ScriptsButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
          tween:Play()
      end
      scriptsopen = false
-     for _, AddedScript in ipairs(Setinel.Scripts.List:GetChildren()) do
+     for _, AddedScript in ipairs(Sentinel.Scripts.List:GetChildren()) do
          if AddedScript:IsA("Frame") and AddedScript.Name ~= "Template" then
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(AddedScript.SName, transitionInfo, {TextTransparency = 1})
@@ -1541,31 +1541,31 @@
          end
      end
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Title, transitionInfo, {TextTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Scripts.Title, transitionInfo, {TextTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {BackgroundTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {BackgroundTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Shadow, transitionInfo, {ImageTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Scripts.Shadow, transitionInfo, {ImageTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.UIStroke, transitionInfo, {Transparency = 1})
+     local tween = TweenService:Create(Sentinel.Scripts.UIStroke, transitionInfo, {Transparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts.Divider, transitionInfo, {Size = UDim2.new(0,0,0.007,0)})
+     local tween = TweenService:Create(Sentinel.Scripts.Divider, transitionInfo, {Size = UDim2.new(0,0,0.007,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {Size = UDim2.new(0.271, 0, 0.184, 0)})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {Size = UDim2.new(0.271, 0, 0.184, 0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Scripts, transitionInfo, {Position = UDim2.new(0.5,0,0.802,0)})
+     local tween = TweenService:Create(Sentinel.Scripts, transitionInfo, {Position = UDim2.new(0.5,0,0.802,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.78, 0)})
+     local tween = TweenService:Create(Sentinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.78, 0)})
      tween:Play()
      wait(0.4)
-     Setinel.Scripts.Visible = false
+     Sentinel.Scripts.Visible = false
      db = false
  end
  
@@ -1575,15 +1575,15 @@
      db = true
      if not ThemeEnabled then
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
          tween:Play()
      end
  
  
-     for _, o in ipairs(Setinel.JoinCodes:GetDescendants()) do
+     for _, o in ipairs(Sentinel.JoinCodes:GetDescendants()) do
          if o.ClassName == "Frame" then
              local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(o, transitionInfo, {BackgroundTransparency = 1})
@@ -1605,14 +1605,14 @@
      end
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.JoinCodes, transitionInfo, {Size = UDim2.new(0.22, 0, 0.207, 0)})
+     local tween = TweenService:Create(Sentinel.JoinCodes, transitionInfo, {Size = UDim2.new(0.22, 0, 0.207, 0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.JoinCodes, transitionInfo, {BackgroundTransparency = 1})
+     local tween = TweenService:Create(Sentinel.JoinCodes, transitionInfo, {BackgroundTransparency = 1})
      tween:Play()
      wait(0.6)
      jcopen = false
-     Setinel.JoinCodes.Visible = false
+     Sentinel.JoinCodes.Visible = false
      db = false
  end
  
@@ -1620,10 +1620,10 @@
      db = true
      if not ThemeEnabled then
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
          tween:Play()
      end
      plrlistopen = true
@@ -1635,10 +1635,10 @@
          plrconopen = false
      end
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.56, 0)})
+     local tween = TweenService:Create(Sentinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.56, 0)})
      tween:Play()
  
-     for _, plrframe in ipairs(Setinel.Playerlist.List:GetChildren()) do
+     for _, plrframe in ipairs(Sentinel.Playerlist.List:GetChildren()) do
          if plrframe.ClassName == "Frame" and plrframe.Name ~= "Template" then
              plrframe.BackgroundTransparency = 1
              plrframe.SName.TextTransparency = 1
@@ -1656,36 +1656,36 @@
          end
      end
      wait(0.1)
-     Setinel.Playerlist.Search.Visible = false
-     Setinel.Playerlist.Title.TextTransparency = 1
-     Setinel.Playerlist.Size = UDim2.new(0.278,0,0.189,0)
-     Setinel.Playerlist.Position = UDim2.new(0.5,0,0.81,0)
-     Setinel.Playerlist.BackgroundTransparency = 1
-     Setinel.Playerlist.Divider.Size = UDim2.new(0,0,0.007,0)
-     Setinel.Playerlist.Visible = true
+     Sentinel.Playerlist.Search.Visible = false
+     Sentinel.Playerlist.Title.TextTransparency = 1
+     Sentinel.Playerlist.Size = UDim2.new(0.278,0,0.189,0)
+     Sentinel.Playerlist.Position = UDim2.new(0.5,0,0.81,0)
+     Sentinel.Playerlist.BackgroundTransparency = 1
+     Sentinel.Playerlist.Divider.Size = UDim2.new(0,0,0.007,0)
+     Sentinel.Playerlist.Visible = true
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Title, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Playerlist.Title, transitionInfo, {TextTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {Position = UDim2.new(0.5,0,0.81,0)})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {Position = UDim2.new(0.5,0,0.81,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {Size = UDim2.new(0.296,0,0.201,0)})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {Size = UDim2.new(0.296,0,0.201,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Shadow, transitionInfo, {ImageTransparency = 0.8})
+     local tween = TweenService:Create(Sentinel.Playerlist.Shadow, transitionInfo, {ImageTransparency = 0.8})
      tween:Play()
      wait(0.01)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Divider, transitionInfo, {Size = UDim2.new(1,0,0.007,0)})
+     local tween = TweenService:Create(Sentinel.Playerlist.Divider, transitionInfo, {Size = UDim2.new(1,0,0.007,0)})
      tween:Play()
      wait(0.2)
  
-     for _, plrframe in ipairs(Setinel.Playerlist.List:GetChildren()) do
+     for _, plrframe in ipairs(Sentinel.Playerlist.List:GetChildren()) do
          if plrframe.ClassName == "Frame" and plrframe.Name ~= "Template" and plrframe then
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(plrframe, transitionInfo, {BackgroundTransparency = 0})
@@ -1740,7 +1740,7 @@
          end
      end
      wait(0.5)
-     Setinel.Playerlist.Visible = true
+     Sentinel.Playerlist.Visible = true
      db = false
  end
  
@@ -1749,63 +1749,63 @@
          return
      end
      local cl = false
-     Setinel.Premium.Size = UDim2.new(0.222, 0, 0.19, 0)
-     Setinel.Premium.Position = UDim2.new(0.5, 0, 0.53, 0)
-     Setinel.Premium.UIGradient.Offset = Vector2.new(1,0)
-     Setinel.Premium.BackgroundTransparency = 1
-     Setinel.Premium.Dollars.Text = Price
-     Setinel.Premium.UIStroke.Transparency = 1
-     Setinel.Premium.Exit.ImageTransparency = 1
-     Setinel.Premium.Title.TextTransparency = 1
-     Setinel.Premium.Description.TextTransparency = 1
-     Setinel.Premium.Shadow.ImageTransparency = 1
-     Setinel.Premium.Purchase.BackgroundTransparency = 1
-     Setinel.Premium.Purchase.TextTransparency = 1
-     Setinel.Premium.Purchase.UIStroke.Transparency = 1
-     Setinel.Premium.FeaturesTitle.TextTransparency = 1
-     Setinel.Premium.Dollars.TextTransparency = 1
-     Setinel.Premium.Robux.TextTransparency = 1
-     for _, f in ipairs(Setinel.Premium.Features:GetChildren()) do
+     Sentinel.Premium.Size = UDim2.new(0.222, 0, 0.19, 0)
+     Sentinel.Premium.Position = UDim2.new(0.5, 0, 0.53, 0)
+     Sentinel.Premium.UIGradient.Offset = Vector2.new(1,0)
+     Sentinel.Premium.BackgroundTransparency = 1
+     Sentinel.Premium.Dollars.Text = Price
+     Sentinel.Premium.UIStroke.Transparency = 1
+     Sentinel.Premium.Exit.ImageTransparency = 1
+     Sentinel.Premium.Title.TextTransparency = 1
+     Sentinel.Premium.Description.TextTransparency = 1
+     Sentinel.Premium.Shadow.ImageTransparency = 1
+     Sentinel.Premium.Purchase.BackgroundTransparency = 1
+     Sentinel.Premium.Purchase.TextTransparency = 1
+     Sentinel.Premium.Purchase.UIStroke.Transparency = 1
+     Sentinel.Premium.FeaturesTitle.TextTransparency = 1
+     Sentinel.Premium.Dollars.TextTransparency = 1
+     Sentinel.Premium.Robux.TextTransparency = 1
+     for _, f in ipairs(Sentinel.Premium.Features:GetChildren()) do
          if f.ClassName == "TextLabel" then
              f.TextTransparency = 1
          end
      end
-     Setinel.Premium.Visible = true
+     Sentinel.Premium.Visible = true
  
      local transitionInfo = TweenInfo.new(1.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(1.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium, transitionInfo, {Position = UDim2.new(0.5, 0, 0.5, 0)})
+     local tween = TweenService:Create(Sentinel.Premium, transitionInfo, {Position = UDim2.new(0.5, 0, 0.5, 0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.UIStroke, transitionInfo, {Transparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.UIStroke, transitionInfo, {Transparency = 0})
      tween:Play()
      wait(0.3)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Shadow, transitionInfo, {ImageTransparency = 0.9})
+     local tween = TweenService:Create(Sentinel.Premium.Shadow, transitionInfo, {ImageTransparency = 0.9})
      tween:Play()
      local transitionInfo = TweenInfo.new(1.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium, transitionInfo, {Size = UDim2.new(0.242, 0, 0.207, 0)})
+     local tween = TweenService:Create(Sentinel.Premium, transitionInfo, {Size = UDim2.new(0.242, 0, 0.207, 0)})
      tween:Play()
      wait(1)
      local transitionInfo = TweenInfo.new(1.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.UIGradient, transitionInfo, {Offset = Vector2.new(0,0)})
+     local tween = TweenService:Create(Sentinel.Premium.UIGradient, transitionInfo, {Offset = Vector2.new(0,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(1.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Title, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Title, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Description, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Description, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.4)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.FeaturesTitle, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.FeaturesTitle, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.15)
-     for _, f in ipairs(Setinel.Premium.Features:GetChildren()) do
+     for _, f in ipairs(Sentinel.Premium.Features:GetChildren()) do
          if f.ClassName == "TextLabel" then
              local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(f, transitionInfo, {TextTransparency = 0})
@@ -1815,64 +1815,64 @@
      end
      wait(0.5)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Dollars, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Dollars, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Robux, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Robux, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.5)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {TextTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Purchase.UIStroke, transitionInfo, {Transparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Purchase.UIStroke, transitionInfo, {Transparency = 0})
      tween:Play()
      wait(0.5)
      local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Premium.Exit, transitionInfo, {ImageTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Premium.Exit, transitionInfo, {ImageTransparency = 0})
      tween:Play()
-     Setinel.Premium.Purchase.AutoButtonColor = false
-     Setinel.Premium.Purchase.MouseEnter:Connect(function()
+     Sentinel.Premium.Purchase.AutoButtonColor = false
+     Sentinel.Premium.Purchase.MouseEnter:Connect(function()
          if cl then
              return
          end
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.313,0,0.174,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.313,0,0.174,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.796,0,0.862,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.796,0,0.862,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0.4})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0.4})
          tween:Play()
          wait(0.1)
-         Setinel.Premium.Purchase.Text = "Join Discord"
+         Sentinel.Premium.Purchase.Text = "Join Discord"
      end)
-     Setinel.Premium.Purchase.MouseLeave:Connect(function()
+     Sentinel.Premium.Purchase.MouseLeave:Connect(function()
          if cl then
              return
          end
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.233,0,0.174,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.233,0,0.174,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.856,0,0.862,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.856,0,0.862,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.1)
-         Setinel.Premium.Purchase.Text = "Purchase"
+         Sentinel.Premium.Purchase.Text = "Purchase"
      end)
  
-     Setinel.Premium.Exit.MouseButton1Click:Connect(function()
+     Sentinel.Premium.Exit.MouseButton1Click:Connect(function()
          cl = true
-         for _, obj in ipairs(Setinel.Premium:GetDescendants()) do
+         for _, obj in ipairs(Sentinel.Premium:GetDescendants()) do
              if obj.ClassName == "Frame" or obj.ClassName == "TextButton" then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(obj, transitionInfo, {BackgroundTransparency = 1})
@@ -1892,26 +1892,26 @@
              end
          end
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Premium, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          wait(0.51)
-         Setinel.Premium.Purchase.Text = "Purchase"
-         Setinel.Premium.Visible = false
+         Sentinel.Premium.Purchase.Text = "Purchase"
+         Sentinel.Premium.Visible = false
      end)
  
-     Setinel.Premium.Purchase.MouseButton1Click:Connect(function()
+     Sentinel.Premium.Purchase.MouseButton1Click:Connect(function()
          cl = true
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.233,0,0.174,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Size = UDim2.new(0.233,0,0.174,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.856,0,0.862,0)})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {Position = UDim2.new(0.856,0,0.862,0)})
          tween:Play()
          wait(0.1)
-         Setinel.Premium.Purchase.Text = "Working.."
+         Sentinel.Premium.Purchase.Text = "Working.."
          local HttpService = game:GetService("HttpService")
          local RequestEnabled = (syn and syn.request) or (http and http.request) or http_request
          if RequestEnabled then
@@ -1929,9 +1929,9 @@
                  })
              })
          end
-         Setinel.Premium.Purchase.Text = "Joined!"
+         Sentinel.Premium.Purchase.Text = "Joined!"
          wait(0.5)
-         for _, obj in ipairs(Setinel.Premium:GetDescendants()) do
+         for _, obj in ipairs(Sentinel.Premium:GetDescendants()) do
              if obj.ClassName == "Frame" or obj.ClassName == "TextButton" then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(obj, transitionInfo, {BackgroundTransparency = 1})
@@ -1951,14 +1951,14 @@
              end
          end
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium.Purchase, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Premium.Purchase, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Premium, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Premium, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          wait(0.51)
-         Setinel.Premium.Purchase.Text = "Purchase"
-         Setinel.Premium.Visible = false
+         Sentinel.Premium.Purchase.Text = "Purchase"
+         Sentinel.Premium.Visible = false
      end)
  end
  
@@ -1966,17 +1966,17 @@
      db = true
      if not ThemeEnabled then
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
          tween:Play()
      end
      plrlistopen = false
      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.UIStroke, transitionInfo, {Transparency = 1})
+     local tween = TweenService:Create(Sentinel.Playerlist.UIStroke, transitionInfo, {Transparency = 1})
      tween:Play()
-     for _, plrframe in ipairs(Setinel.Playerlist.List:GetChildren()) do
+     for _, plrframe in ipairs(Sentinel.Playerlist.List:GetChildren()) do
          if plrframe.ClassName == "Frame" and plrframe.Name ~= "Template" and plrframe then
  
              if plrframe:FindFirstChild("Avatar") then
@@ -2036,35 +2036,35 @@
  
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Shadow, transitionInfo, {ImageTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Playerlist.Shadow, transitionInfo, {ImageTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Title, transitionInfo, {TextTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Playerlist.Title, transitionInfo, {TextTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {BackgroundTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {BackgroundTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist.Divider, transitionInfo, {Size = UDim2.new(0,0,0.007,0)})
+     local tween = TweenService:Create(Sentinel.Playerlist.Divider, transitionInfo, {Size = UDim2.new(0,0,0.007,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {Size = UDim2.new(0.271, 0, 0.184, 0)})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {Size = UDim2.new(0.271, 0, 0.184, 0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Playerlist, transitionInfo, {Position = UDim2.new(0.5,0,0.802,0)})
+     local tween = TweenService:Create(Sentinel.Playerlist, transitionInfo, {Position = UDim2.new(0.5,0,0.802,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.78, 0)})
+     local tween = TweenService:Create(Sentinel.Toasts, transitionInfo, {Position = UDim2.new(0.5, 0, 0.78, 0)})
      tween:Play()
  
      wait(0.4)
-     Setinel.Playerlist.Visible = false
+     Sentinel.Playerlist.Visible = false
      db = false
  end
  
  function StartPopUpFramework()
      if DMNReady then
-         for _, button in ipairs(Setinel.Player:GetChildren()) do
+         for _, button in ipairs(Sentinel.Player:GetChildren()) do
              if button:FindFirstChild("Interact") then
                  button.Interact.MouseEnter:Connect(function()
                      button.Popup.Visible = true
@@ -2107,23 +2107,23 @@
          end
          if not ThemeEnabled then
              local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
+             local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
              tween:Play()
              local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
+             local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
              tween:Play()
          end
          homedb = true
          homeopen = true
          local blur = Instance.new("BlurEffect",game.Lighting)
-         blur.Name = "SetinelBlur"
+         blur.Name = "SentinelBlur"
          blur.Size = 0
-         Setinel.Home.Shadow.ImageTransparency = 1
-         Setinel.Home.Welcome.TextTransparency = 1
-         Setinel.Home.WelcomeSub.TextTransparency = 1
+         Sentinel.Home.Shadow.ImageTransparency = 1
+         Sentinel.Home.Welcome.TextTransparency = 1
+         Sentinel.Home.WelcomeSub.TextTransparency = 1
          -- CAMERA
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(game.Lighting:FindFirstChild("SetinelBlur"), transitionInfo, {Size = 24})
+         local tween = TweenService:Create(game.Lighting:FindFirstChild("SentinelBlur"), transitionInfo, {Size = 24})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
          local tween = TweenService:Create(workspace.CurrentCamera, transitionInfo, {FieldOfView = 40})
@@ -2144,7 +2144,7 @@
              if audio.ClassName == "Sound" then
                  local EQ = Instance.new("EqualizerSoundEffect")
                  EQ.Parent = audio
-                 EQ.Name = "SetinelEditorialEffect"
+                 EQ.Name = "SentinelEditorialEffect"
                  local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
                  local tween = game:GetService("TweenService"):Create(EQ, transitionInfo, {HighGain = -20})
                  tween:Play()
@@ -2167,68 +2167,68 @@
              game:GetService("StarterGui"):SetCoreGuiEnabled(coregui,false)
          end
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          -- NOTIFICATION
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Notifications, transitionInfo, {Position = UDim2.new(0.815, 0, 0.08, 0)})
+         local tween = TweenService:Create(Sentinel.Notifications, transitionInfo, {Position = UDim2.new(0.815, 0, 0.08, 0)})
          tween:Play()
  
          -- Discord
-         Setinel.Home.Discord.BackgroundTransparency = 1
-         Setinel.Home.Discord.Title.TextTransparency = 1
-         Setinel.Home.Discord.Info.TextTransparency = 1
-         Setinel.Home.Discord.Icon.ImageTransparency = 1
-         Setinel.Home.Discord.Copyframe.BackgroundTransparency = 1
-         Setinel.Home.Discord.Copyframe.Copy.ImageTransparency = 1
-         Setinel.Home.Discord.Size = UDim2.new(0.157, 0, 0.137, 0)
-         Setinel.Home.Discord.Position = UDim2.new(0.013,0,0.165,0)
+         Sentinel.Home.Discord.BackgroundTransparency = 1
+         Sentinel.Home.Discord.Title.TextTransparency = 1
+         Sentinel.Home.Discord.Info.TextTransparency = 1
+         Sentinel.Home.Discord.Icon.ImageTransparency = 1
+         Sentinel.Home.Discord.Copyframe.BackgroundTransparency = 1
+         Sentinel.Home.Discord.Copyframe.Copy.ImageTransparency = 1
+         Sentinel.Home.Discord.Size = UDim2.new(0.157, 0, 0.137, 0)
+         Sentinel.Home.Discord.Position = UDim2.new(0.013,0,0.165,0)
          -- Friends
-         Setinel.Home.Friends.BackgroundTransparency = 1
-         Setinel.Home.Friends.Icon.ImageTransparency = 1
-         Setinel.Home.Friends.Info.TextTransparency = 1
-         Setinel.Home.Friends.Title.TextTransparency = 1
-         Setinel.Home.Friends.Online.BackgroundTransparency = 1
-         Setinel.Home.Friends.Online.Icon.ImageTransparency = 1
-         Setinel.Home.Friends.Online.FriendsOnline.TextTransparency = 1
-         Setinel.Home.Friends.Online.Title.TextTransparency = 1
-         Setinel.Home.Friends.Offline.BackgroundTransparency = 1
-         Setinel.Home.Friends.Offline.Icon.ImageTransparency = 1
-         Setinel.Home.Friends.Offline.FriendsOffline.TextTransparency = 1
-         Setinel.Home.Friends.Offline.Title.TextTransparency = 1
-         Setinel.Home.Friends.InServer.BackgroundTransparency = 1
-         Setinel.Home.Friends.InServer.Icon.ImageTransparency = 1
-         Setinel.Home.Friends.InServer.FriendsInGame.TextTransparency = 1
-         Setinel.Home.Friends.InServer.Title.TextTransparency = 1
-         Setinel.Home.Friends.All.BackgroundTransparency = 1
-         Setinel.Home.Friends.All.Icon.ImageTransparency = 1
-         Setinel.Home.Friends.All.FriendsAll.TextTransparency = 1
-         Setinel.Home.Friends.All.Title.TextTransparency = 1
-         Setinel.Home.Friends.Size = UDim2.new(0.224, 0, 0.199, 0)
-         Setinel.Home.Friends.Position = UDim2.new(0.165,0,0.163,0)
+         Sentinel.Home.Friends.BackgroundTransparency = 1
+         Sentinel.Home.Friends.Icon.ImageTransparency = 1
+         Sentinel.Home.Friends.Info.TextTransparency = 1
+         Sentinel.Home.Friends.Title.TextTransparency = 1
+         Sentinel.Home.Friends.Online.BackgroundTransparency = 1
+         Sentinel.Home.Friends.Online.Icon.ImageTransparency = 1
+         Sentinel.Home.Friends.Online.FriendsOnline.TextTransparency = 1
+         Sentinel.Home.Friends.Online.Title.TextTransparency = 1
+         Sentinel.Home.Friends.Offline.BackgroundTransparency = 1
+         Sentinel.Home.Friends.Offline.Icon.ImageTransparency = 1
+         Sentinel.Home.Friends.Offline.FriendsOffline.TextTransparency = 1
+         Sentinel.Home.Friends.Offline.Title.TextTransparency = 1
+         Sentinel.Home.Friends.InServer.BackgroundTransparency = 1
+         Sentinel.Home.Friends.InServer.Icon.ImageTransparency = 1
+         Sentinel.Home.Friends.InServer.FriendsInGame.TextTransparency = 1
+         Sentinel.Home.Friends.InServer.Title.TextTransparency = 1
+         Sentinel.Home.Friends.All.BackgroundTransparency = 1
+         Sentinel.Home.Friends.All.Icon.ImageTransparency = 1
+         Sentinel.Home.Friends.All.FriendsAll.TextTransparency = 1
+         Sentinel.Home.Friends.All.Title.TextTransparency = 1
+         Sentinel.Home.Friends.Size = UDim2.new(0.224, 0, 0.199, 0)
+         Sentinel.Home.Friends.Position = UDim2.new(0.165,0,0.163,0)
          -- Data
-         Setinel.Home.Data.BackgroundTransparency = 1
-         Setinel.Home.Data.Title.TextTransparency = 1
-         Setinel.Home.Data.Info.TextTransparency = 1
-         for _, txt in ipairs(Setinel.Home.Data.data:GetChildren()) do
+         Sentinel.Home.Data.BackgroundTransparency = 1
+         Sentinel.Home.Data.Title.TextTransparency = 1
+         Sentinel.Home.Data.Info.TextTransparency = 1
+         for _, txt in ipairs(Sentinel.Home.Data.data:GetChildren()) do
              if txt.Name ~= "UIListLayout" then
                  txt.TextTransparency = 1
                  txt.RichText = true
              end
          end
-         Setinel.Home.Data.Size = UDim2.new(0.153, 0, 0.315, 0)
-         Setinel.Home.Data.Position = UDim2.new(0.017,0,0.302,0)
+         Sentinel.Home.Data.Size = UDim2.new(0.153, 0, 0.315, 0)
+         Sentinel.Home.Data.Position = UDim2.new(0.017,0,0.302,0)
          -- Music, ControlPanel and FPS
-         Setinel.Home.ControlPanel.BackgroundTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Lighting.BackgroundTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Notification.BackgroundTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Power.BackgroundTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Lighting.Interact.ImageTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Notification.Interact.ImageTransparency = 1
-         Setinel.Home.ControlPanel.Buttons.Power.Interact.ImageTransparency = 1
+         Sentinel.Home.ControlPanel.BackgroundTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Lighting.BackgroundTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Notification.BackgroundTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Power.BackgroundTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Lighting.Interact.ImageTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Notification.Interact.ImageTransparency = 1
+         Sentinel.Home.ControlPanel.Buttons.Power.Interact.ImageTransparency = 1
  
  
-         for _, mitem in ipairs(Setinel.Home.Music:GetDescendants()) do
+         for _, mitem in ipairs(Sentinel.Home.Music:GetDescendants()) do
              if mitem:IsA("ImageButton") or mitem:IsA("ImageLabel") then
                  mitem.ImageTransparency = 1
              elseif mitem:IsA("TextButton") or mitem:IsA("TextLabel") or mitem:IsA("TextBox") then
@@ -2238,87 +2238,87 @@
              end
          end
          -- User
-         Setinel.Home.User.BackgroundTransparency = 1
-         Setinel.Home.User.BigTitle.TextTransparency = 1
-         Setinel.Home.User.Title.TextTransparency = 1
-         Setinel.Home.User.Avatar.ImageTransparency = 1
-         Setinel.Home.User.Avatar.BackgroundTransparency = 1
-         Setinel.Home.User.Size = UDim2.new(0.157, 0, 0.099, 0)
-         Setinel.Home.User.Position = UDim2.new(0.166,0,0.361,0)
+         Sentinel.Home.User.BackgroundTransparency = 1
+         Sentinel.Home.User.BigTitle.TextTransparency = 1
+         Sentinel.Home.User.Title.TextTransparency = 1
+         Sentinel.Home.User.Avatar.ImageTransparency = 1
+         Sentinel.Home.User.Avatar.BackgroundTransparency = 1
+         Sentinel.Home.User.Size = UDim2.new(0.157, 0, 0.099, 0)
+         Sentinel.Home.User.Position = UDim2.new(0.166,0,0.361,0)
          -- Keybind
-         Setinel.Home.Keybind.BackgroundTransparency = 1
-         Setinel.Home.Keybind.KeyBG.BackgroundTransparency = 1
-         Setinel.Home.Keybind.Title.TextTransparency = 1
-         Setinel.Home.Keybind.Info.TextTransparency = 1
-         Setinel.Home.Keybind.KeyBG.KeyBox.TextTransparency = 1
-         Setinel.Home.Keybind.Size = UDim2.new(0.132, 0, 0.09, 0)
-         Setinel.Home.Keybind.Position = UDim2.new(0.167,0,0.458,0)
+         Sentinel.Home.Keybind.BackgroundTransparency = 1
+         Sentinel.Home.Keybind.KeyBG.BackgroundTransparency = 1
+         Sentinel.Home.Keybind.Title.TextTransparency = 1
+         Sentinel.Home.Keybind.Info.TextTransparency = 1
+         Sentinel.Home.Keybind.KeyBG.KeyBox.TextTransparency = 1
+         Sentinel.Home.Keybind.Size = UDim2.new(0.132, 0, 0.09, 0)
+         Sentinel.Home.Keybind.Position = UDim2.new(0.167,0,0.458,0)
          -- Wallpaper
-         Setinel.Home.WallpaperManage.BackgroundTransparency = 1
-         Setinel.Home.WallpaperManage.WBG.BackgroundTransparency = 1
-         Setinel.Home.WallpaperManage.Title.TextTransparency = 1
-         Setinel.Home.WallpaperManage.Info.TextTransparency = 1
-         Setinel.Home.WallpaperManage.WBG.WBox.TextTransparency = 1
-         Setinel.Home.WallpaperManage.None.Interact.ImageTransparency = 1
-         Setinel.Home.WallpaperManage.None.BackgroundTransparency = 1
-         Setinel.Home.WallpaperManage.Size = UDim2.new(0.116, 0, 0.091, 0)
-         Setinel.Home.WallpaperManage.Position = UDim2.new(0.167, 0, 0.548, 0)
+         Sentinel.Home.WallpaperManage.BackgroundTransparency = 1
+         Sentinel.Home.WallpaperManage.WBG.BackgroundTransparency = 1
+         Sentinel.Home.WallpaperManage.Title.TextTransparency = 1
+         Sentinel.Home.WallpaperManage.Info.TextTransparency = 1
+         Sentinel.Home.WallpaperManage.WBG.WBox.TextTransparency = 1
+         Sentinel.Home.WallpaperManage.None.Interact.ImageTransparency = 1
+         Sentinel.Home.WallpaperManage.None.BackgroundTransparency = 1
+         Sentinel.Home.WallpaperManage.Size = UDim2.new(0.116, 0, 0.091, 0)
+         Sentinel.Home.WallpaperManage.Position = UDim2.new(0.167, 0, 0.548, 0)
          -- Executors
-         Setinel.Home.Executors.BackgroundTransparency = 1
-         Setinel.Home.Executors.Title.TextTransparency = 1
-         Setinel.Home.Executors.Info.TextTransparency = 1
-         Setinel.Home.Executors.Size = UDim2.new(0.155, 0, 0.175, 0)
-         Setinel.Home.Executors.Position = UDim2.new(0.015,0,0.617,0)
-         for _, img in ipairs(Setinel.Home.Executors.data:GetChildren()) do
+         Sentinel.Home.Executors.BackgroundTransparency = 1
+         Sentinel.Home.Executors.Title.TextTransparency = 1
+         Sentinel.Home.Executors.Info.TextTransparency = 1
+         Sentinel.Home.Executors.Size = UDim2.new(0.155, 0, 0.175, 0)
+         Sentinel.Home.Executors.Position = UDim2.new(0.015,0,0.617,0)
+         for _, img in ipairs(Sentinel.Home.Executors.data:GetChildren()) do
              if img.Name ~= "UIListLayout" then
                  img.ImageTransparency = 1
              end
          end
  
-         Setinel.Home.Visible = true
+         Sentinel.Home.Visible = true
          wait(0.01)
  
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Shadow, transitionInfo, {ImageTransparency = 0.25})
+         local tween = TweenService:Create(Sentinel.Home.Shadow, transitionInfo, {ImageTransparency = 0.25})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Welcome, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Welcome, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.FPS, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()	
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS.FPSText, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.FPS.FPSText, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS.Icon, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.FPS.Icon, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WelcomeSub, transitionInfo, {TextTransparency = 0.3})
+         local tween = TweenService:Create(Sentinel.Home.WelcomeSub, transitionInfo, {TextTransparency = 0.3})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Lighting, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Lighting, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Notification, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Notification, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Power, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Power, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Lighting.Interact, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Lighting.Interact, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Notification.Interact, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Notification.Interact, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Power.Interact, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Power.Interact, transitionInfo, {ImageTransparency = 0})
          tween:Play()
-         for _, mitem in ipairs(Setinel.Home.Music:GetDescendants()) do
+         for _, mitem in ipairs(Sentinel.Home.Music:GetDescendants()) do
              if mitem:IsA("ImageButton") or mitem:IsA("ImageLabel") then
                  if mitem.Name == "ShadowDown" then
                      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
@@ -2342,185 +2342,185 @@
  
          -- Discord Animate
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Discord, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord, transitionInfo, {Size = UDim2.new(0.151, 0, 0.132, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Discord, transitionInfo, {Size = UDim2.new(0.151, 0, 0.132, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord, transitionInfo, {Position = UDim2.new(0.019, 0, 0.17, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Discord, transitionInfo, {Position = UDim2.new(0.019, 0, 0.17, 0)})
          tween:Play()
          wait(0.05)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Info, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Info, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Icon, transitionInfo, {ImageTransparency = 0.95})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Icon, transitionInfo, {ImageTransparency = 0.95})
          tween:Play()
          wait(0.05)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Copyframe, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Copyframe, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Copyframe.Copy, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Copyframe.Copy, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          wait(0.01)
          -- Friends Animate
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends, transitionInfo, {Size = UDim2.new(0.215, 0, 0.191, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Friends, transitionInfo, {Size = UDim2.new(0.215, 0, 0.191, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends, transitionInfo, {Position = UDim2.new(0.173, 0, 0.17, 0)})
-         tween:Play()
-         wait(0.01)
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Title, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Info, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends, transitionInfo, {Position = UDim2.new(0.173, 0, 0.17, 0)})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Title, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.Info, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         wait(0.01)
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.Icon, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.Icon, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.FriendsOnline, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.FriendsOnline, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline, transitionInfo, {BackgroundTransparency = 0})
-         tween:Play()
-         wait(0.001)
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.Icon, transitionInfo, {ImageTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.Title, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.FriendsOffline, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.Icon, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.Icon, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.FriendsInGame, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.FriendsOffline, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.Icon, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.Icon, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.FriendsAll, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.FriendsInGame, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.All, transitionInfo, {BackgroundTransparency = 0})
+         tween:Play()
+         wait(0.001)
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.Icon, transitionInfo, {ImageTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.Title, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.FriendsAll, transitionInfo, {TextTransparency = 0})
          tween:Play()
          -- Data Animation
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data, transitionInfo, {Size = UDim2.new(0.151,0,0.311,0)})
+         local tween = TweenService:Create(Sentinel.Home.Data, transitionInfo, {Size = UDim2.new(0.151,0,0.311,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data, transitionInfo, {Position = UDim2.new(0.019,0,0.306,0)})
+         local tween = TweenService:Create(Sentinel.Home.Data, transitionInfo, {Position = UDim2.new(0.019,0,0.306,0)})
          tween:Play()
          wait(0.005)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.Info, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         wait(0.001)
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Executor, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.Info, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Version, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Executor, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Time, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Version, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Players, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Time, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.File, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Players, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         wait(0.001)
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Data.data.File, transitionInfo, {TextTransparency = 0})
          tween:Play()
          -- User Animate
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.User, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.005)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User, transitionInfo, {Size = UDim2.new(0.15, 0, 0.094, 0)})
+         local tween = TweenService:Create(Sentinel.Home.User, transitionInfo, {Size = UDim2.new(0.15, 0, 0.094, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User, transitionInfo, {Position = UDim2.new(0.173, 0, 0.364, 0)})
+         local tween = TweenService:Create(Sentinel.Home.User, transitionInfo, {Position = UDim2.new(0.173, 0, 0.364, 0)})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Avatar, transitionInfo, {BackgroundTransparency = 0.9})
+         local tween = TweenService:Create(Sentinel.Home.User.Avatar, transitionInfo, {BackgroundTransparency = 0.9})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Avatar, transitionInfo, {ImageTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.User.Avatar, transitionInfo, {ImageTransparency = 0})
          tween:Play()
          wait(0.005)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.BigTitle, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.User.BigTitle, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.User.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          -- Executors
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Executors, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors, transitionInfo, {Size = UDim2.new(0.151, 0, 0.17, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Executors, transitionInfo, {Size = UDim2.new(0.151, 0, 0.17, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors, transitionInfo, {Position = UDim2.new(0.019, 0, 0.621, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Executors, transitionInfo, {Position = UDim2.new(0.019, 0, 0.621, 0)})
          tween:Play()
          wait(0.005)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors.Title, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Executors.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors.Info, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Executors.Info, transitionInfo, {TextTransparency = 0})
          tween:Play()
-         for _, img in ipairs(Setinel.Home.Executors.data:GetChildren()) do
+         for _, img in ipairs(Sentinel.Home.Executors.data:GetChildren()) do
              if img.Name ~= "UIListLayout" then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(img, transitionInfo, {ImageTransparency = 0})
@@ -2530,61 +2530,61 @@
          end
          -- Keybind
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Keybind, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.005)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind, transitionInfo, {Size = UDim2.new(0.126, 0, 0.086, 0)})
+         local tween = TweenService:Create(Sentinel.Home.Keybind, transitionInfo, {Size = UDim2.new(0.126, 0, 0.086, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind, transitionInfo, {Position = UDim2.new(0.173, 0, 0.462, 0)})
-         tween:Play()
-         wait(0.001)
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.Title, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.Info, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Keybind, transitionInfo, {Position = UDim2.new(0.173, 0, 0.462, 0)})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.KeyBG, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.Title, transitionInfo, {TextTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Keybind.Info, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.KeyBG.KeyBox, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.KeyBG, transitionInfo, {BackgroundTransparency = 0})
+         tween:Play()
+         wait(0.001)
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.Keybind.KeyBG.KeyBox, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage, transitionInfo, {BackgroundTransparency = 0})
          tween:Play()
          wait(0.005)
  
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage, transitionInfo, {Size = UDim2.new(0.109, 0, 0.086, 0)})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage, transitionInfo, {Size = UDim2.new(0.109, 0, 0.086, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage, transitionInfo, {Position = UDim2.new(0.173, 0, 0.553, 0)})
-         tween:Play()
-         wait(0.001)
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.Title, transitionInfo, {TextTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.Info, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage, transitionInfo, {Position = UDim2.new(0.173, 0, 0.553, 0)})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.None, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.Title, transitionInfo, {TextTransparency = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.None.Interact, transitionInfo, {ImageTransparency = 0})
-         tween:Play()
-         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.WBG, transitionInfo, {BackgroundTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.Info, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.001)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.WBG.WBox, transitionInfo, {TextTransparency = 0})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.None, transitionInfo, {BackgroundTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.None.Interact, transitionInfo, {ImageTransparency = 0})
+         tween:Play()
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.WBG, transitionInfo, {BackgroundTransparency = 0})
+         tween:Play()
+         wait(0.001)
+         local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.WBG.WBox, transitionInfo, {TextTransparency = 0})
          tween:Play()
          wait(0.65)
  
@@ -2602,21 +2602,21 @@
      end
      if CheckWritefile() then
          if isfile(WallpaperFileName) then
-             Setinel.Home.Wallpaper.Visible = true
-             Setinel.Home.Wallpaper.ImageTransparency = 1
+             Sentinel.Home.Wallpaper.Visible = true
+             Sentinel.Home.Wallpaper.ImageTransparency = 1
              if getsynasset then
-                 Setinel.Home.Wallpaper.Image = getsynasset(WallpaperFileName)
+                 Sentinel.Home.Wallpaper.Image = getsynasset(WallpaperFileName)
                  writefile("SentinelX Wallpaper.txt",WallpaperFileName)
                  Toast("Sucessfully changed wallpaper to "..WallpaperFileName)
              elseif getcustomasset then
-                 Setinel.Home.Wallpaper.Image = getcustomasset(WallpaperFileName)
+                 Sentinel.Home.Wallpaper.Image = getcustomasset(WallpaperFileName)
                  writefile("SentinelX Wallpaper.txt",WallpaperFileName)
                  Toast("Sucessfully changed wallpaper to "..WallpaperFileName)
              else
                  Toast("Missing getcustomasset function")
              end
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 0})
+             local tween = TweenService:Create(Sentinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 0})
              tween:Play()
          else
              Notify("Couldn't locate file","We couldn't locate the file for use, make sure you add .png or .jpeg to the textbox",3944676352)
@@ -2624,19 +2624,19 @@
      end
  end
  
- Setinel.Home.WallpaperManage.None.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Home.WallpaperManage.None.Interact.MouseButton1Click:Connect(function()
      if CheckWritefile() then
          if isfile("SentinelX Wallpaper.txt") then
              delfile("SentinelX Wallpaper.txt")
-             Setinel.Home.WallpaperManage.WBG.WBox.Text = ""
+             Sentinel.Home.WallpaperManage.WBG.WBox.Text = ""
          end
      end
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 1})
      tween:Play()
      wait(0.8)
-     Setinel.Home.Wallpaper.Visible = false
-     Setinel.Home.Wallpaper.Image = ""
+     Sentinel.Home.Wallpaper.Visible = false
+     Sentinel.Home.Wallpaper.Image = ""
  end)
  
  function Execute(String)
@@ -2652,22 +2652,22 @@
          if not UserIsPremium then
              return
          else
-             Setinel.Detection.Banner.Visible = true
-             Setinel.Detection.Banner.Title.Text = "Premium Script"
+             Sentinel.Detection.Banner.Visible = true
+             Sentinel.Detection.Banner.Title.Text = "Premium Script"
          end
      else
-         Setinel.Detection.Banner.Visible = false
+         Sentinel.Detection.Banner.Visible = false
      end
      if CustomScriptEnabled then
-         Setinel.Detection.Banner.Visible = true
-         Setinel.Detection.Banner.Title.Text = "Custom Script"
+         Sentinel.Detection.Banner.Visible = true
+         Sentinel.Detection.Banner.Title.Text = "Custom Script"
      end
-     Setinel.Detection.Banner.BackgroundTransparency = 1
-     Setinel.Detection.Banner.Title.TextTransparency = 1
-     Setinel.Detection.Banner.Shadow.ImageTransparency = 1
-     Setinel.Detection.Size = UDim2.new(0.219, 0,0.146, 0)
-     Setinel.Detection.Position = UDim2.new(0.5, 0,0.235, 0)
-     for _, obj in ipairs(Setinel.Detection:GetDescendants()) do
+     Sentinel.Detection.Banner.BackgroundTransparency = 1
+     Sentinel.Detection.Banner.Title.TextTransparency = 1
+     Sentinel.Detection.Banner.Shadow.ImageTransparency = 1
+     Sentinel.Detection.Size = UDim2.new(0.219, 0,0.146, 0)
+     Sentinel.Detection.Position = UDim2.new(0.5, 0,0.235, 0)
+     for _, obj in ipairs(Sentinel.Detection:GetDescendants()) do
          if obj.ClassName == "TextLabel" then
              obj.TextTransparency = 1
          elseif obj.ClassName == "ImageLabel" or obj.ClassName == "ImageButton" then
@@ -2679,11 +2679,11 @@
          end
      end
      local DetectionFired = true
-     Setinel.Detection.Visible = true
-     Setinel.Detection.Description.Text = Script.Description
-     Setinel.Detection.GameName.Text = Script.Name
-     Setinel.Detection.BackgroundTransparency = 1 
-     for _, obj in ipairs(Setinel.Detection:GetDescendants()) do
+     Sentinel.Detection.Visible = true
+     Sentinel.Detection.Description.Text = Script.Description
+     Sentinel.Detection.GameName.Text = Script.Name
+     Sentinel.Detection.BackgroundTransparency = 1 
+     for _, obj in ipairs(Sentinel.Detection:GetDescendants()) do
          if obj.Name ~= "Banner" or obj.Parent.Name ~= "Banner" then
              if obj.ClassName == "TextLabel" then
                  if obj.Name == "Title" and obj.Parent.Name ~= "Banner" then
@@ -2732,42 +2732,42 @@
          end
      end
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection, transitionInfo, {BackgroundTransparency = 0.5})
+     local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {BackgroundTransparency = 0.5})
      tween:Play()
      wait(1)
  
  
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Size = UDim2.new(0.239, 0,0.16, 0)})
+     local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Size = UDim2.new(0.239, 0,0.16, 0)})
      tween:Play()
  
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.194, 0)})
+     local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.194, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.5)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection.ExecuteNote, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Detection.ExecuteNote, transitionInfo, {TextTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection.ExitBG, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Detection.ExitBG, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.5)
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection.Banner, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Detection.Banner, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection.Banner.Title, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Detection.Banner.Title, transitionInfo, {TextTransparency = 0})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Detection.Banner.Shadow, transitionInfo, {ImageTransparency = 0.7})
+     local tween = TweenService:Create(Sentinel.Detection.Banner.Shadow, transitionInfo, {ImageTransparency = 0.7})
      tween:Play()
  
-     Setinel.Detection.ExitBG.Interact.MouseButton1Click:Connect(function()
-         for _, obj in ipairs(Setinel.Detection:GetDescendants()) do
+     Sentinel.Detection.ExitBG.Interact.MouseButton1Click:Connect(function()
+         for _, obj in ipairs(Sentinel.Detection:GetDescendants()) do
              if obj.ClassName == "TextLabel" then
                  local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(obj, transitionInfo, {TextTransparency = 1})
@@ -2787,22 +2787,22 @@
              end
          end
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Detection, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Size = UDim2.new(0.219, 0,0.146, 0)})
+         local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Size = UDim2.new(0.219, 0,0.146, 0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.235, 0)})
+         local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.235, 0)})
          tween:Play()
          wait(0.81)
-         Setinel.Detection.Visible = false
+         Sentinel.Detection.Visible = false
          DetectionFired = false
      end)
      UserInputService.InputBegan:Connect(function(input, processed)
          if (input.KeyCode == Enum.KeyCode.Y and processed == false) and DetectionFired then
              DetectionFired = false
-             for _, obj in ipairs(Setinel.Detection:GetDescendants()) do
+             for _, obj in ipairs(Sentinel.Detection:GetDescendants()) do
                  if obj.ClassName == "TextLabel" then
                      local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
                      local tween = TweenService:Create(obj, transitionInfo, {TextTransparency = 1})
@@ -2822,16 +2822,16 @@
                  end
              end
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Size = UDim2.new(0.219, 0,0.146, 0)})
+             local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Size = UDim2.new(0.219, 0,0.146, 0)})
              tween:Play()
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.235, 0)})
+             local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {Position = UDim2.new(0.5, 0,0.235, 0)})
              tween:Play()
              local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Detection, transitionInfo, {BackgroundTransparency = 1})
+             local tween = TweenService:Create(Sentinel.Detection, transitionInfo, {BackgroundTransparency = 1})
              tween:Play()
              wait(0.81)
-             Setinel.Detection.Visible = false
+             Sentinel.Detection.Visible = false
              Toast("Starting "..Script.Name)
  
              if Script.KeySys == true then
@@ -2850,49 +2850,49 @@
          homedb = true
          if not ThemeEnabled then
              local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
+             local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(56, 56, 56)})
              tween:Play()
              local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
+             local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(238, 238, 238)})
              tween:Play()
          end
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Notifications, transitionInfo, {Position = UDim2.new(0.815,0,0.044,0)})
+         local tween = TweenService:Create(Sentinel.Notifications, transitionInfo, {Position = UDim2.new(0.815,0,0.044,0)})
          tween:Play()		
  
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.FPS, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()	
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS.FPSText, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.FPS.FPSText, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.FPS.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.FPS.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()	
  
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Lighting, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Lighting, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Notification, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Notification, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Power, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Power, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Lighting.Interact, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Lighting.Interact, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Notification.Interact, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Notification.Interact, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.ControlPanel.Buttons.Power.Interact, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.ControlPanel.Buttons.Power.Interact, transitionInfo, {ImageTransparency = 1})
          tween:Play()
  
-         for _, mitem in ipairs(Setinel.Home.Music:GetDescendants()) do
+         for _, mitem in ipairs(Sentinel.Home.Music:GetDescendants()) do
              if mitem:IsA("ImageButton") or mitem:IsA("ImageLabel") then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(mitem, transitionInfo, {ImageTransparency = 1})
@@ -2909,142 +2909,142 @@
          end
  
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Wallpaper, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Welcome, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Welcome, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WelcomeSub, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WelcomeSub, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Copyframe, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Copyframe, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Discord.Copyframe.Copy, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Discord.Copyframe.Copy, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          -- Friends Animate
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Online.FriendsOnline, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Online.FriendsOnline, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.Offline.FriendsOffline, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.Offline.FriendsOffline, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.InServer.FriendsInGame, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.InServer.FriendsInGame, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.All, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.Icon, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.Icon, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Friends.All.FriendsAll, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Friends.All.FriendsAll, transitionInfo, {TextTransparency = 1})
          tween:Play()
          -- Data Animation
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Executor, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Executor, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Version, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Version, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Time, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Time, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.Players, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.Players, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Data.data.File, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Data.data.File, transitionInfo, {TextTransparency = 1})
          tween:Play()
          -- User Animate
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.User, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Avatar, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.User.Avatar, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Avatar, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.User.Avatar, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.BigTitle, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.User.BigTitle, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.User.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.User.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          -- Executors
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Executors, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Executors.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Executors.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Executors.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
-         for _, img in ipairs(Setinel.Home.Executors.data:GetChildren()) do
+         for _, img in ipairs(Sentinel.Home.Executors.data:GetChildren()) do
              if img.Name ~= "UIListLayout" then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
                  local tween = TweenService:Create(img, transitionInfo, {ImageTransparency = 1})
@@ -3053,50 +3053,50 @@
          end
          -- Keybind
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Keybind, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.KeyBG, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.KeyBG, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Keybind.KeyBG.KeyBox, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Keybind.KeyBG.KeyBox, transitionInfo, {TextTransparency = 1})
          tween:Play()
          wait(0.01)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.Title, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.Title, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.Info, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.Info, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.WBG, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.WBG, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.None, transitionInfo, {BackgroundTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.None, transitionInfo, {BackgroundTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.None.Interact, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.None.Interact, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.WallpaperManage.WBG.WBox, transitionInfo, {TextTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.WallpaperManage.WBG.WBox, transitionInfo, {TextTransparency = 1})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
          local tween = TweenService:Create(workspace.CurrentCamera, transitionInfo, {FieldOfView = 70})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.8, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(game.Lighting:FindFirstChild("SetinelBlur"), transitionInfo, {Size = 0})
+         local tween = TweenService:Create(game.Lighting:FindFirstChild("SentinelBlur"), transitionInfo, {Size = 0})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Home.Shadow, transitionInfo, {ImageTransparency = 1})
+         local tween = TweenService:Create(Sentinel.Home.Shadow, transitionInfo, {ImageTransparency = 1})
          tween:Play()
          for _, gui in pairs(CachedUI) do
              for _, pgui in ipairs(LocalPlayer:FindFirstChildWhichIsA("PlayerGui"):GetChildren()) do
@@ -3107,18 +3107,18 @@
          end
          for _, audio in ipairs(workspace:GetChildren()) do
              if audio.ClassName == "Sound" then
-                 if audio:FindFirstChild("SetinelEditorialEffect") then
+                 if audio:FindFirstChild("SentinelEditorialEffect") then
                      local transitionInfo = TweenInfo.new(0.35, Enum.EasingStyle.Quint)
-                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SetinelEditorialEffect"), transitionInfo, {HighGain = -15})
+                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SentinelEditorialEffect"), transitionInfo, {HighGain = -15})
                      tween:Play()
                      local transitionInfo = TweenInfo.new(0.35, Enum.EasingStyle.Quint)
-                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SetinelEditorialEffect"), transitionInfo, {LowGain = -15})
+                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SentinelEditorialEffect"), transitionInfo, {LowGain = -15})
                      tween:Play()
                      local transitionInfo = TweenInfo.new(0.35, Enum.EasingStyle.Quint)
-                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SetinelEditorialEffect"), transitionInfo, {MidGain = 5})
+                     local tween = game:GetService("TweenService"):Create(audio:FindFirstChild("SentinelEditorialEffect"), transitionInfo, {MidGain = 5})
                      tween:Play()
                      wait(0.35)
-                     audio:FindFirstChild("SetinelEditorialEffect"):Destroy()
+                     audio:FindFirstChild("SentinelEditorialEffect"):Destroy()
                  end
              end
          end
@@ -3126,8 +3126,8 @@
              game:GetService("StarterGui"):SetCoreGuiEnabled(coregui,true)
          end
          wait(0.8)
-         Setinel.Home.Visible = false
-         game.Lighting:FindFirstChild("SetinelBlur"):Destroy()
+         Sentinel.Home.Visible = false
+         game.Lighting:FindFirstChild("SentinelBlur"):Destroy()
          homedb = false
      end
  end
@@ -3138,20 +3138,20 @@
      end
      if not ThemeEnabled then
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton, transitionInfo, {BackgroundColor3 = Color3.fromRGB(238,238,238)})
          tween:Play()
          local transitionInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
+         local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton.Interact, transitionInfo, {ImageColor3 = Color3.fromRGB(56,56,56)})
          tween:Play()
      end
-     Setinel.JoinCodes.PlayersUsingSetinel.Visible = false
-     Setinel.JoinCodes.JoinCodesAvatar.Visible = false
-     Setinel.JoinCodes.JDisplayName.Visible = false
-     Setinel.JoinCodes.JUsername.Visible = false
-     Setinel.JoinCodes.Invitation.Visible = false
+     Sentinel.JoinCodes.PlayersUsingSentinel.Visible = false
+     Sentinel.JoinCodes.JoinCodesAvatar.Visible = false
+     Sentinel.JoinCodes.JDisplayName.Visible = false
+     Sentinel.JoinCodes.JUsername.Visible = false
+     Sentinel.JoinCodes.Invitation.Visible = false
      jcopen = true
-     Setinel.JoinCodes.BackgroundTransparency = 1
-     for _, o in ipairs(Setinel.JoinCodes:GetDescendants()) do
+     Sentinel.JoinCodes.BackgroundTransparency = 1
+     for _, o in ipairs(Sentinel.JoinCodes:GetDescendants()) do
          if o.ClassName == "Frame" then
              o.BackgroundTransparency = 1
          end
@@ -3162,16 +3162,16 @@
              o.ImageTransparency = 1
          end
      end
-     Setinel.JoinCodes.Size = UDim2.new(0.22, 0, 0.207, 0)
-     Setinel.JoinCodes.Visible = true
+     Sentinel.JoinCodes.Size = UDim2.new(0.22, 0, 0.207, 0)
+     Sentinel.JoinCodes.Visible = true
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.JoinCodes, transitionInfo, {Size = UDim2.new(0.231, 0, 0.218, 0)})
+     local tween = TweenService:Create(Sentinel.JoinCodes, transitionInfo, {Size = UDim2.new(0.231, 0, 0.218, 0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.JoinCodes, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.JoinCodes, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
-     for _, o in ipairs(Setinel.JoinCodes:GetDescendants()) do
+     for _, o in ipairs(Sentinel.JoinCodes:GetDescendants()) do
          if o.ClassName == "Frame" then
              local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
              local tween = TweenService:Create(o, transitionInfo, {BackgroundTransparency = 0})
@@ -3218,72 +3218,72 @@
  
  function OpenServerhopMenu()
      ServerhopCancelled = false
-     Setinel.Serverhop.Visible = true
-     Setinel.Serverhop.BackgroundTransparency = 1
-     Setinel.Serverhop.Title.TextTransparency = 1
-     Setinel.Serverhop.Info.TextTransparency = 1
-     Setinel.Serverhop.Stop.Visible = true
-     Setinel.Serverhop.ServerhopLoading.Size = UDim2.new(0.642,0,0.015,0)
-     Setinel.Serverhop.ProgressInfo.TextTransparency = 1
-     Setinel.Serverhop.ServerhopLoading.BackgroundTransparency = 1
-     Setinel.Serverhop.ServerhopLoading.Progress.Size = UDim2.new(0,0,1,0)
-     Setinel.Serverhop.Stop.ImageTransparency = 1
+     Sentinel.Serverhop.Visible = true
+     Sentinel.Serverhop.BackgroundTransparency = 1
+     Sentinel.Serverhop.Title.TextTransparency = 1
+     Sentinel.Serverhop.Info.TextTransparency = 1
+     Sentinel.Serverhop.Stop.Visible = true
+     Sentinel.Serverhop.ServerhopLoading.Size = UDim2.new(0.642,0,0.015,0)
+     Sentinel.Serverhop.ProgressInfo.TextTransparency = 1
+     Sentinel.Serverhop.ServerhopLoading.BackgroundTransparency = 1
+     Sentinel.Serverhop.ServerhopLoading.Progress.Size = UDim2.new(0,0,1,0)
+     Sentinel.Serverhop.Stop.ImageTransparency = 1
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.3)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Title, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop.Title, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Info, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop.Info, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.3)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading, transitionInfo, {BackgroundTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading, transitionInfo, {BackgroundTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ProgressInfo, transitionInfo, {TextTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop.ProgressInfo, transitionInfo, {TextTransparency = 0})
      tween:Play()
      wait(0.3)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Stop, transitionInfo, {ImageTransparency = 0})
+     local tween = TweenService:Create(Sentinel.Serverhop.Stop, transitionInfo, {ImageTransparency = 0})
      tween:Play()
      wait(0.1)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.1,0,1,0)})
+     local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.1,0,1,0)})
      tween:Play()
  end
  
  function CloseServerhopMenu()
      serverhopdb = false
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0,0,1,0)})
+     local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0,0,1,0)})
      tween:Play()
      wait(0.9)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading, transitionInfo, {Size = UDim2.new(0,0,0.015,0)})
+     local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading, transitionInfo, {Size = UDim2.new(0,0,0.015,0)})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ProgressInfo, transitionInfo, {TextTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop.ProgressInfo, transitionInfo, {TextTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Title, transitionInfo, {TextTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop.Title, transitionInfo, {TextTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Info, transitionInfo, {TextTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop.Info, transitionInfo, {TextTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading, transitionInfo, {BackgroundTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading, transitionInfo, {BackgroundTransparency = 1})
      tween:Play()
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop.Stop, transitionInfo, {ImageTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop.Stop, transitionInfo, {ImageTransparency = 1})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Serverhop, transitionInfo, {BackgroundTransparency = 1})
+     local tween = TweenService:Create(Sentinel.Serverhop, transitionInfo, {BackgroundTransparency = 1})
      tween:Play()
  end
  
@@ -3291,66 +3291,66 @@
  function Serverhop()
      if not serverhopdb then
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
          tween:Play()	
          serverhopdb = true
-         Setinel.Serverhop.ProgressInfo.Text = "Fetching Servers"
+         Sentinel.Serverhop.ProgressInfo.Text = "Fetching Servers"
          OpenServerhopMenu()
  
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
          tween:Play()	
          wait(0.3)	
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.22,0,1,0)})
+         local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.22,0,1,0)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
          tween:Play()
          wait(0.3)
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
          tween:Play()	
          wait(0.9)
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.4,0,1,0)})
+         local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.4,0,1,0)})
          tween:Play()
          wait(0.3)
          if ThemeEnabled then
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+             local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
              tween:Play()
          else
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
+             local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
              tween:Play()
          end		
          wait(0.6)
-         Setinel.Serverhop.ProgressInfo.Text = "Finding best server"
+         Sentinel.Serverhop.ProgressInfo.Text = "Finding best server"
          local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.5,0,1,0)})
+         local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.5,0,1,0)})
          tween:Play()
          -- "Fetching servers"
          local Amount = CheckServers()
          if Amount == "NoFound" then
              -- No Servers, return
-             Setinel.Serverhop.ProgressInfo.Text = "No servers found"
+             Sentinel.Serverhop.ProgressInfo.Text = "No servers found"
              if ThemeEnabled then
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-                 local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+                 local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
                  tween:Play()
              else
                  local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-                 local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
+                 local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
                  tween:Play()
              end	
              CloseServerhopMenu()
          elseif Amount > 0 then
              -- Found more than 0 servers, let them know, then wait, then teleport
              if not ServerhopCancelled then
-                 Setinel.Serverhop.ProgressInfo.Text = "Found server"
+                 Sentinel.Serverhop.ProgressInfo.Text = "Found server"
                  local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-                 local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.8,0,1,0)})
+                 local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.8,0,1,0)})
                  tween:Play()
              end
              wait(1.7)
@@ -3366,32 +3366,32 @@
              end
  
              if #servers > 0 then
-                 Setinel.Serverhop.ProgressInfo.Text = "Teleporting"
+                 Sentinel.Serverhop.ProgressInfo.Text = "Teleporting"
                  local transitionInfo = TweenInfo.new(0.6, Enum.EasingStyle.Quint)
-                 local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.85,0,1,0)})
+                 local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(0.85,0,1,0)})
                  tween:Play()
                  local transitionInfo = TweenInfo.new(0.75, Enum.EasingStyle.Quint)
-                 local tween = TweenService:Create(Setinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(1,0,1,0)})
+                 local tween = TweenService:Create(Sentinel.Serverhop.ServerhopLoading.Progress, transitionInfo, {Size = UDim2.new(1,0,1,0)})
                  tween:Play()
                  wait(0.75)
-                 Setinel.Serverhop.Stop.Visible = false
+                 Sentinel.Serverhop.Stop.Visible = false
                  if not ServerhopCancelled then
                      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-                     local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+                     local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
                      tween:Play()	
                      game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[1])
                      serverhopdb = false
                  end
              else
-                 Setinel.Serverhop.ProgressInfo.Text = "Server lost"
+                 Sentinel.Serverhop.ProgressInfo.Text = "Server lost"
                  CloseServerhopMenu()
                  if ThemeEnabled then
                      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-                     local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+                     local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
                      tween:Play()
                  else
                      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-                     local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
+                     local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
                      tween:Play()
                  end	
                  serverhopdb = false
@@ -3400,15 +3400,15 @@
      end
  end
  
- Setinel.Serverhop.Stop.MouseButton1Click:Connect(function()
-     Setinel.Serverhop.ProgressInfo.Text = "Cancelled"
+ Sentinel.Serverhop.Stop.MouseButton1Click:Connect(function()
+     Sentinel.Serverhop.ProgressInfo.Text = "Cancelled"
      if ThemeEnabled then
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
          tween:Play()
      else
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
+         local tween = TweenService:Create(Sentinel.Player.Serverhop, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62,62,62)})
          tween:Play()
      end
  
@@ -3519,26 +3519,26 @@
  
  function olduidestroy()
      local removedinstances = 0
-     if game.Lighting:FindFirstChild("SetinelBlur") then
-         game.Lighting:FindFirstChild("SetinelBlur"):Destroy()
+     if game.Lighting:FindFirstChild("SentinelBlur") then
+         game.Lighting:FindFirstChild("SentinelBlur"):Destroy()
      end
      if game:GetService("RunService"):IsStudio() then
-         if LocalPlayer:FindFirstChildWhichIsA("PlayerGui"):FindFirstChild("Setinel") then
-             LocalPlayer:FindFirstChildWhichIsA("PlayerGui"):FindFirstChild("Setinel"):Destroy()
+         if LocalPlayer:FindFirstChildWhichIsA("PlayerGui"):FindFirstChild("Sentinel") then
+             LocalPlayer:FindFirstChildWhichIsA("PlayerGui"):FindFirstChild("Sentinel"):Destroy()
          end
      else
          for _, ui in ipairs(game:GetService("CoreGui"):GetChildren()) do
-             if ui.Name == "Setinel" and ui ~= Setinel then
+             if ui.Name == "Sentinel" and ui ~= Sentinel then
                  ui.Enabled = false
-                 ui.Name = "SetinelOld"
+                 ui.Name = "SentinelOld"
                  removedinstances = removedinstances + 1
              end
          end
          if gethui then
              for _, ui in ipairs(gethui():GetChildren()) do
-                 if ui.Name == "Setinel" and ui ~= Setinel then
+                 if ui.Name == "Sentinel" and ui ~= Sentinel then
                      ui.Enabled = false
-                     ui.Name = "SetinelOld"
+                     ui.Name = "SentinelOld"
                      removedinstances = removedinstances + 1
                  end
              end
@@ -3584,7 +3584,7 @@
          warn("SentinelX - Loading Themes")
      end
      Toast("Loading "..Theme.Name.." theme to SentinelX")
-     for _, obj in ipairs(Setinel:GetDescendants()) do
+     for _, obj in ipairs(Sentinel:GetDescendants()) do
          if obj.ClassName == "TextButton" or obj.ClassName == "TextLabel" or obj.ClassName == "TextBox" then
              if Theme.Font ~= "" then
                  obj.Font = Theme.Font
@@ -3728,7 +3728,7 @@
      if DebugMode then
          warn("SentinelX - Continuing Boot Process (begun)")
      end
-     Setinel.Premium.Robux.Text = "or 2899 Robux"
+     Sentinel.Premium.Robux.Text = "or 2899 Robux"
      FirstCheck()
      VersionCheck()
      if DebugMode then
@@ -3743,7 +3743,7 @@
              warn("SentinelX - Disabled ScriptContext Errors")
          end
      end
-     for _, ob in ipairs(Setinel:GetDescendants()) do
+     for _, ob in ipairs(Sentinel:GetDescendants()) do
          if ob.ClassName == "Frame" or ob.ClassName == "TextButton" or ob.ClassName == "TextLabel" or ob.ClassName == "ImageLabel" or ob.ClassName == "ImageButton" or ob.ClassName == "TextBox" then
              ob.ZIndex = ob.ZIndex + 10
          end
@@ -3768,22 +3768,22 @@
      end
      StartAntiKick()
      StartAntiIdle()
-     Setinel.Home.Data.data.Players.Text = "Players: <b>"..tostring(#game.Players:GetChildren()).."/"..tostring(game.Players.MaxPlayers).."</b>"
-     Setinel.Main.Position = UDim2.new(0.5, 0, 1.15, 0)
-     Setinel.Home.Discord.Info.RichText = true
-     Setinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
-     Setinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
-     Setinel.Playerlist.List.Template.Visible = false
-     Setinel.Home.Music.RecentlyPlayed.Visible = false
-     Setinel.Notifications.Template.Visible = false
-     Setinel.DisplayOrder = 100
-     Setinel.Home.Discord.Info.RichText = true
-     Setinel.Notifications.Template.Content.RichText = false
-     Setinel.Home.User.BigTitle.Text = LocalPlayer.DisplayName
-     Setinel.Home.User.Title.Text = LocalPlayer.Name
-     Setinel.Home.Keybind.KeyBG.KeyBox.Text = tostring(Keybind)
-     Setinel.Main.KeybindNote.Visible = true
-     Setinel.Main.Visible = true
+     Sentinel.Home.Data.data.Players.Text = "Players: <b>"..tostring(#game.Players:GetChildren()).."/"..tostring(game.Players.MaxPlayers).."</b>"
+     Sentinel.Main.Position = UDim2.new(0.5, 0, 1.15, 0)
+     Sentinel.Home.Discord.Info.RichText = true
+     Sentinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
+     Sentinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
+     Sentinel.Playerlist.List.Template.Visible = false
+     Sentinel.Home.Music.RecentlyPlayed.Visible = false
+     Sentinel.Notifications.Template.Visible = false
+     Sentinel.DisplayOrder = 100
+     Sentinel.Home.Discord.Info.RichText = true
+     Sentinel.Notifications.Template.Content.RichText = false
+     Sentinel.Home.User.BigTitle.Text = LocalPlayer.DisplayName
+     Sentinel.Home.User.Title.Text = LocalPlayer.Name
+     Sentinel.Home.Keybind.KeyBG.KeyBox.Text = tostring(Keybind)
+     Sentinel.Main.KeybindNote.Visible = true
+     Sentinel.Main.Visible = true
  
      if DebugMode then
          warn("SentinelX - Started AntiKick and AntiIdle")
@@ -3799,7 +3799,7 @@
  
              end
          end
-         Setinel.Home.User.Avatar.Image = game:GetService("Players"):GetUserThumbnailAsync(LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+         Sentinel.Home.User.Avatar.Image = game:GetService("Players"):GetUserThumbnailAsync(LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
          if DebugMode then
              warn("SentinelX - Finished Player Data")
          end	
@@ -3814,7 +3814,7 @@
              warn("SentinelX - First time or not autoexec")
          end
          local sound = Instance.new("Sound")
-         sound.Parent = Setinel
+         sound.Parent = Sentinel
          sound.SoundId = "rbxassetid://"..6958727243
          sound.Name = "boot"
          if DebugMode then
@@ -3846,7 +3846,7 @@
              tween:Play()
          end
          wait(0.6)
-         Setinel.Main.KeybindNote.Visible = false
+         Sentinel.Main.KeybindNote.Visible = false
          if DebugMode then
              warn("SentinelX - Keybind Note false")
          end
@@ -3863,10 +3863,10 @@
              warn("SentinelX - Autoexec")
          end
          wait(1)
-         Setinel.Main.KeybindNote.Text = "tap "..Keybind.." to start"
-         Setinel.Main.Position = UDim2.new(0.5,0,1.05,0)
-         Setinel.Main.KeybindNote.Visible = true
-         Setinel.Main.Visible = true
+         Sentinel.Main.KeybindNote.Text = "tap "..Keybind.." to start"
+         Sentinel.Main.Position = UDim2.new(0.5,0,1.05,0)
+         Sentinel.Main.KeybindNote.Visible = true
+         Sentinel.Main.Visible = true
      end
      if PremiumToastRequired == true then
          Toast("Successfully upgraded license","GothamBlack")
@@ -3885,25 +3885,25 @@
          if isfile("SentinelX Wallpaper.txt") then
              if isfile(readfile("SentinelX Wallpaper.txt")) then
                  if getsynasset then
-                     Setinel.Home.Wallpaper.Visible = true
-                     Setinel.Home.Wallpaper.Image = getsynasset(readfile("SentinelX Wallpaper.txt"))
-                     Setinel.Home.WallpaperManage.WBG.WBox.Text = readfile("SentinelX Wallpaper.txt")
+                     Sentinel.Home.Wallpaper.Visible = true
+                     Sentinel.Home.Wallpaper.Image = getsynasset(readfile("SentinelX Wallpaper.txt"))
+                     Sentinel.Home.WallpaperManage.WBG.WBox.Text = readfile("SentinelX Wallpaper.txt")
                  else
-                     Setinel.Home.Wallpaper.Visible = true
-                     Setinel.Home.Wallpaper.Image = getcustomasset(readfile("SentinelX Wallpaper.txt"))
-                     Setinel.Home.WallpaperManage.WBG.WBox.Text = readfile("SentinelX Wallpaper.txt")
+                     Sentinel.Home.Wallpaper.Visible = true
+                     Sentinel.Home.Wallpaper.Image = getcustomasset(readfile("SentinelX Wallpaper.txt"))
+                     Sentinel.Home.WallpaperManage.WBG.WBox.Text = readfile("SentinelX Wallpaper.txt")
                  end
              end
          end
      end
  
      -- Sorts out script order
-     Setinel.Scripts.List.Template.Size = UDim2.new(0.979, 0,0.055, 0)
-     Setinel.Scripts.List.Template.Visible = false
+     Sentinel.Scripts.List.Template.Size = UDim2.new(0.979, 0,0.055, 0)
+     Sentinel.Scripts.List.Template.Visible = false
      local newpos = 1
      for _, Script in pairs(UniversalScripts) do
-         local new = Setinel.Scripts.List.Template:Clone()
-         new.Parent = Setinel.Scripts.List
+         local new = Sentinel.Scripts.List.Template:Clone()
+         new.Parent = Sentinel.Scripts.List
          new.Name = Script.Name
          new.Visible = true
          new.BackgroundColor3 = Script.Colour
@@ -3983,12 +3983,12 @@
      if DebugMode then
          warn("SentinelX - Checking version")
      end
-     --loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Setinelx/main/routine',true))()
-     --local ver = game:HttpGet('https://raw.githubusercontent.com/shlexware/Setinelx/main/latest')
+     --loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Sentinelx/main/routine',true))()
+     --local ver = game:HttpGet('https://raw.githubusercontent.com/shlexware/Sentinelx/main/latest')
      --print(ver)
      --if tonumber(ver) > Release then
      --	Connected = false
-     --	warn("Not up to date, needs to be on "..tostring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Setinelx/main/latest')))
+     --	warn("Not up to date, needs to be on "..tostring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Sentinelx/main/latest')))
      --	return false
      --else
      Connected = true
@@ -3997,17 +3997,17 @@
  
  
  
- function BootSetinelX()
+ function BootSentinelX()
      if DebugMode then
          warn("SentinelX - Beginning Boot Process")
      end
-     Setinel.Main.Visible = true
-     Setinel.Main.Position = UDim2.new(0.5, 0, 1.05, 0)
-     Setinel.Main.KeybindNote.Position = UDim2.new(0.5,0,-1.303,0)
-     Setinel.Main.KeybindNote.Text = "Loading SentinelX"
-     Setinel.Main.KeybindNote.Visible = true
-     Setinel.Main.Buttons.ModulesButton.Visible = false
-     Setinel.Main.KeybindNote.TextTransparency = 0.4
+     Sentinel.Main.Visible = true
+     Sentinel.Main.Position = UDim2.new(0.5, 0, 1.05, 0)
+     Sentinel.Main.KeybindNote.Position = UDim2.new(0.5,0,-1.303,0)
+     Sentinel.Main.KeybindNote.Text = "Loading SentinelX"
+     Sentinel.Main.KeybindNote.Visible = true
+     Sentinel.Main.Buttons.ModulesButton.Visible = false
+     Sentinel.Main.KeybindNote.TextTransparency = 0.4
      if Beta then
          if not UserIsPremium then
              return
@@ -4021,10 +4021,10 @@
      olduidestroy()
      UpdateExecutor()
  
-     if not SetinelEnabled then
+     if not SentinelEnabled then
          Notify("Not Enabled","SentinelX is currently disabled",4384402990)
          wait(NotificationDuration+3)
-         Setinel:Destroy()
+         Sentinel:Destroy()
          return
      end
  
@@ -4033,7 +4033,7 @@
      end
      ContinueBoot()
  
-     SetinelXLoaded = true
+     SentinelXLoaded = true
  end
  
  
@@ -4042,13 +4042,13 @@
  
  -- Main functionality of core buttons
  
- Setinel.Main.Buttons.HomeButton.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Main.Buttons.HomeButton.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.HomeButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.HomeButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
      tween:Play()
      if homeopen then
          CloseHome()
@@ -4057,20 +4057,20 @@
      end
  end)
  
- Setinel.Home.Discord.Copyframe.Copy.MouseButton1Click:Connect(function()
+ Sentinel.Home.Discord.Copyframe.Copy.MouseButton1Click:Connect(function()
      CopyDiscord()
-     Setinel.Home.Discord.Info.Text = "Successfully copied the discord invite link to your clipboard."
+     Sentinel.Home.Discord.Info.Text = "Successfully copied the discord invite link to your clipboard."
      wait(3)
-     Setinel.Home.Discord.Info.Text = "We'd love to have you join our community! Tap the button to <b>copy</b> the link to your <b>clipboard</b>"
+     Sentinel.Home.Discord.Info.Text = "We'd love to have you join our community! Tap the button to <b>copy</b> the link to your <b>clipboard</b>"
  end)
  
- Setinel.Main.Buttons.PlayerButton.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Main.Buttons.PlayerButton.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.PlayerButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.PlayerButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.PlayerButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.PlayerButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
      tween:Play()
      if not db then
          if plrconopen then
@@ -4081,13 +4081,13 @@
      end
  end)
  
- Setinel.Main.Buttons.PlayersButton.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Main.Buttons.PlayersButton.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.PlayersButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.PlayersButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
      tween:Play()
      if not db and DMNReady then
          if plrlistopen then
@@ -4098,13 +4098,13 @@
      end
  end)
  
- Setinel.Main.Buttons.JoinCodesButton.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Main.Buttons.JoinCodesButton.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.JoinCodesButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.JoinCodesButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
      tween:Play()
      if not db and DMNReady then
          if jcopen then
@@ -4115,13 +4115,13 @@
      end
  end)
  
- Setinel.Main.Buttons.ScriptsButton.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Main.Buttons.ScriptsButton.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.ScriptsButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.ScriptsButton, transitionInfo, {Size = UDim2.new(0.081, 0,0.559, 0)})
      tween:Play()
      wait(0.2)
      local transitionInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Main.Buttons.ScriptsButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
+     local tween = TweenService:Create(Sentinel.Main.Buttons.ScriptsButton, transitionInfo, {Size = UDim2.new(0.093, 0,0.647, 0)})
      tween:Play()
      if not db and DMNReady then
          if scriptsopen then
@@ -4277,125 +4277,125 @@
  
  
  
- Setinel.Player.Noclip.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Player.Noclip.Interact.MouseButton1Click:Connect(function()
      if Clip then
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+         local tween = TweenService:Create(Sentinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
          tween:Play()
          NoClip()
      else
          if ThemeEnabled then
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+             local tween = TweenService:Create(Sentinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
              tween:Play()
          else
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
+             local tween = TweenService:Create(Sentinel.Player.Noclip, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
              tween:Play()
          end
  
          ReClip()
      end
  end)
- Setinel.Player.Invisible.Interact.MouseButton1Click:Connect(Invisible)
- Setinel.Player.God.Interact.MouseButton1Click:Connect(God)
- Setinel.Player.Respawn.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Player.Invisible.Interact.MouseButton1Click:Connect(Invisible)
+ Sentinel.Player.God.Interact.MouseButton1Click:Connect(God)
+ Sentinel.Player.Respawn.Interact.MouseButton1Click:Connect(function()
      Respawn()
      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+     local tween = TweenService:Create(Sentinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
      tween:Play()
  
  end)
  
- Setinel.Player.Rejoin.Interact.MouseButton1Click:Connect(Rejoin)
+ Sentinel.Player.Rejoin.Interact.MouseButton1Click:Connect(Rejoin)
  
- Setinel.Player.Fly.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Player.Fly.Interact.MouseButton1Click:Connect(function()
      if Flying then
          if ThemeEnabled then
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Fly, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+             local tween = TweenService:Create(Sentinel.Player.Fly, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
              tween:Play()
          else
              local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-             local tween = TweenService:Create(Setinel.Player.Fly, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
+             local tween = TweenService:Create(Sentinel.Player.Fly, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
              tween:Play()
          end
-         Setinel.Player.Fly.Popup.Title.Text = "Fly"
-         Setinel.Player.Fly.Interact.Image = "rbxassetid://3926305904"
-         Setinel.Player.Fly.Interact.ImageRectOffset = Vector2.new(124,364)
+         Sentinel.Player.Fly.Popup.Title.Text = "Fly"
+         Sentinel.Player.Fly.Interact.Image = "rbxassetid://3926305904"
+         Sentinel.Player.Fly.Interact.ImageRectOffset = Vector2.new(124,364)
          Toast("Disabled flight")
          Unfly()
      else 
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Fly, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+         local tween = TweenService:Create(Sentinel.Player.Fly, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
          tween:Play()
  
-         Setinel.Player.Fly.Popup.Title.Text = "Unfly"
-         Setinel.Player.Fly.Interact.Image = "rbxassetid://3926307971"
-         Setinel.Player.Fly.Interact.ImageRectOffset = Vector2.new(884,324)
+         Sentinel.Player.Fly.Popup.Title.Text = "Unfly"
+         Sentinel.Player.Fly.Interact.Image = "rbxassetid://3926307971"
+         Sentinel.Player.Fly.Interact.ImageRectOffset = Vector2.new(884,324)
          Toast("Enabled flight")
          Fly()
      end
  end)
  
  function PlaySound()
-     if Setinel:FindFirstChildWhichIsA("Sound") then
-         Setinel:FindFirstChildWhichIsA("Sound"):Destroy()
+     if Sentinel:FindFirstChildWhichIsA("Sound") then
+         Sentinel:FindFirstChildWhichIsA("Sound"):Destroy()
      end
-     Setinel.Home.Music.PlayingTitle.Text = "Now Playing"
+     Sentinel.Home.Music.PlayingTitle.Text = "Now Playing"
      MusicPlaying = true
-     local MusicSound = Instance.new("Sound",Setinel)
+     local MusicSound = Instance.new("Sound",Sentinel)
      MusicSound.Volume = 1
-     MusicSound.SoundId = "rbxassetid://"..Setinel.Home.Music.ID.IDFrame.IDBox.Text
-     CurrentMusicInfo = game:GetService("MarketplaceService"):GetProductInfo(tonumber(Setinel.Home.Music.ID.IDFrame.IDBox.Text))
-     Setinel.Home.Music.ID.IDFrame.IDBox.Text = ""
+     MusicSound.SoundId = "rbxassetid://"..Sentinel.Home.Music.ID.IDFrame.IDBox.Text
+     CurrentMusicInfo = game:GetService("MarketplaceService"):GetProductInfo(tonumber(Sentinel.Home.Music.ID.IDFrame.IDBox.Text))
+     Sentinel.Home.Music.ID.IDFrame.IDBox.Text = ""
      MusicSound.TimePosition = 0
      MusicSound.Looped = true
      MusicSound:Play()
      if CurrentMusicInfo then
-         Setinel.Home.Music.Playing.Text = CurrentMusicInfo.Name
+         Sentinel.Home.Music.Playing.Text = CurrentMusicInfo.Name
      else
-         Setinel.Home.Music.Playing.Text = "Unknown"
+         Sentinel.Home.Music.Playing.Text = "Unknown"
      end
-     Setinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(804,124)
+     Sentinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(804,124)
      Toast("Playing music using ShlexSound")
  end
  
- Setinel.Home.Music.Toggle.MouseButton1Click:Connect(function()
+ Sentinel.Home.Music.Toggle.MouseButton1Click:Connect(function()
      if MusicPlaying then
          MusicPlaying = false
-         if not Setinel:FindFirstChildWhichIsA("Sound") then
-             Toast("Setinel was unable to locate any Sound to stop")
-             Setinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
+         if not Sentinel:FindFirstChildWhichIsA("Sound") then
+             Toast("Sentinel was unable to locate any Sound to stop")
+             Sentinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
          else
-             Setinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
-             Setinel:FindFirstChildWhichIsA("Sound"):Pause()
+             Sentinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(764,244)
+             Sentinel:FindFirstChildWhichIsA("Sound"):Pause()
              Toast("Stopped Sound")
          end
      elseif not MusicPlaying then
-         if not Setinel:FindFirstChildWhichIsA("Sound") then
+         if not Sentinel:FindFirstChildWhichIsA("Sound") then
              Toast("Please start a sound using the Asset ID bar above")
          else
              MusicPlaying = true
-             Setinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(804,124)
-             Setinel:FindFirstChildWhichIsA("Sound"):Resume()
+             Sentinel.Home.Music.Toggle.ImageRectOffset = Vector2.new(804,124)
+             Sentinel:FindFirstChildWhichIsA("Sound"):Resume()
              Toast("Resumed sound")
          end
      end
  end)
  
- Setinel.Home.Music.ID.IDFrame.IDBox.FocusLost:Connect(function()
+ Sentinel.Home.Music.ID.IDFrame.IDBox.FocusLost:Connect(function()
      PlaySound()
  end)
  
- Setinel.Home.WallpaperManage.WBG.WBox.FocusLost:Connect(function()
-     ChangeWallpaper(Setinel.Home.WallpaperManage.WBG.WBox.Text)
+ Sentinel.Home.WallpaperManage.WBG.WBox.FocusLost:Connect(function()
+     ChangeWallpaper(Sentinel.Home.WallpaperManage.WBG.WBox.Text)
  end)
  local CheckingForKey = false
- Setinel.Home.Keybind.KeyBG.KeyBox.Focused:Connect(function()
+ Sentinel.Home.Keybind.KeyBG.KeyBox.Focused:Connect(function()
      CheckingForKey = true
  end)
- Setinel.Home.Keybind.KeyBG.KeyBox.FocusLost:Connect(function()
+ Sentinel.Home.Keybind.KeyBG.KeyBox.FocusLost:Connect(function()
      CheckingForKey = false
  end)
  
@@ -4403,10 +4403,10 @@
      local SplitMessage = string.split(tostring(Key), ".")
      local NewKeyNoEnum = SplitMessage[3]
      Keybind = tostring(NewKeyNoEnum)
-     Setinel.Home.Keybind.KeyBG.KeyBox.Text = Keybind
-     Setinel.Home.Keybind.KeyBG.KeyBox:ReleaseFocus()
+     Sentinel.Home.Keybind.KeyBG.KeyBox.Text = Keybind
+     Sentinel.Home.Keybind.KeyBG.KeyBox:ReleaseFocus()
      if CheckWritefile() then
-         writefile("SetinelX Keybind.txt",tostring(NewKeyNoEnum))
+         writefile("SentinelX Keybind.txt",tostring(NewKeyNoEnum))
          Toast("Successfully changed Keybind to "..tostring(NewKeyNoEnum))
      else
          Toast("Successfully changed Keybind to "..tostring(NewKeyNoEnum)..", however we're unable to save for next use")
@@ -4443,7 +4443,7 @@
  end)
  
  local RunService = game:GetService("RunService")
- local FpsLabel = Setinel.Home.FPS.FPSText
+ local FpsLabel = Sentinel.Home.FPS.FPSText
  
  local TimeFunction = RunService:IsRunning() and time or os.clock
  
@@ -4451,10 +4451,10 @@
  local FrameUpdateTable = {}
  
  game.Players.PlayerAdded:Connect(function(Player)
-     if Setinel:FindFirstChild("Home") == false then
+     if Sentinel:FindFirstChild("Home") == false then
          return
      end
-     Setinel.Home.Data.data.Players.Text = "Players: <b>"..tostring(#game.Players:GetChildren()).."/"..tostring(game.Players.MaxPlayers).."</b>"
+     Sentinel.Home.Data.data.Players.Text = "Players: <b>"..tostring(#game.Players:GetChildren()).."/"..tostring(game.Players.MaxPlayers).."</b>"
      if Player.Name == "wSentinal" then
          Toast("The developer of SentinelX, wSentinel, has joined your server")
      end
@@ -4466,9 +4466,9 @@
  
  
  function RemovePlayer(Player)
-     if Setinel and Setinel:FindFirstChild("Playerlist") and Setinel.Playerlist:FindFirstChild("List") then
-         if Setinel.Playerlist.List:FindFirstChild(Player.Name) then
-             Setinel.Playerlist.List:FindFirstChild(Player.Name):Destroy()
+     if Sentinel and Sentinel:FindFirstChild("Playerlist") and Sentinel.Playerlist:FindFirstChild("List") then
+         if Sentinel.Playerlist.List:FindFirstChild(Player.Name) then
+             Sentinel.Playerlist.List:FindFirstChild(Player.Name):Destroy()
          end
      end
  end
@@ -4479,9 +4479,9 @@
  
  local mouse = game:GetService('Players').LocalPlayer:GetMouse()
  -- Walkspeed
- local Walkslider = Setinel.Player.Speed.Action
- local Walklabel = Setinel.Player.Speed.Title
- local Walkbar = Setinel.Player.Speed.Action.Amount
+ local Walkslider = Sentinel.Player.Speed.Action
+ local Walklabel = Sentinel.Player.Speed.Title
+ local Walkbar = Sentinel.Player.Speed.Action.Amount
  
  local uis = game:GetService('UserInputService')
  local Walkpadding = {}
@@ -4511,9 +4511,9 @@
  end)
  
  -- Jumppower
- local Jumpslider = Setinel.Player.Jumppower.Action
- local Jumplabel = Setinel.Player.Jumppower.Title
- local Jumpbar = Setinel.Player.Jumppower.Action.Amount
+ local Jumpslider = Sentinel.Player.Jumppower.Action
+ local Jumplabel = Sentinel.Player.Jumppower.Title
+ local Jumpbar = Sentinel.Player.Jumppower.Action.Amount
  
  local uis = game:GetService('UserInputService')
  local Jumppadding = {}
@@ -4544,9 +4544,9 @@
  end)
  
  -- FlySpeed
- local flyslider = Setinel.Player.FlySpeed.Action
- local flylabel = Setinel.Player.FlySpeed.Title
- local flybar = Setinel.Player.FlySpeed.Action.Amount
+ local flyslider = Sentinel.Player.FlySpeed.Action
+ local flylabel = Sentinel.Player.FlySpeed.Title
+ local flybar = Sentinel.Player.FlySpeed.Action.Amount
  
  local uis = game:GetService('UserInputService')
  local flypadding = {}
@@ -4583,15 +4583,15 @@
      end
  end)
  
- Setinel.JoinCodes.CreateJC.MouseButton1Click:Connect(function()
+ Sentinel.JoinCodes.CreateJC.MouseButton1Click:Connect(function()
      if UserIsPro then
          Toast("Creating Join Code..")
          local result = game:HttpGet("https://shlex.dev/api/joincodes/createcode.php?gid=".. game.PlaceId ..":".. game.JobId)
-         Setinel.CreateCode.Visible = true
+         Sentinel.CreateCode.Visible = true
          if result ~= "fail" then
-             Setinel.CreateCode.GeneratedCode.TextEditable = false
-             Setinel.CreateCode.GeneratedCode.ClearTextOnFocus = false
-             Setinel.CreateCode.GeneratedCode.Text = result
+             Sentinel.CreateCode.GeneratedCode.TextEditable = false
+             Sentinel.CreateCode.GeneratedCode.ClearTextOnFocus = false
+             Sentinel.CreateCode.GeneratedCode.Text = result
              Toast("Copied '"..result.."', your join code, to clipboard")
              if setclipboard then
                  setclipboard(result)
@@ -4605,9 +4605,9 @@
      end
  end)
  
- Setinel.JoinCodes.CodeBox.JCText.FocusLost:Connect(function()
+ Sentinel.JoinCodes.CodeBox.JCText.FocusLost:Connect(function()
  
-     local code = Setinel.JoinCodes.CodeBox.JCText.Text
+     local code = Sentinel.JoinCodes.CodeBox.JCText.Text
  
      local result = game:HttpGet("https://shlex.dev/api/joincodes/usecode.php?code=".. code);
  
@@ -4618,7 +4618,7 @@
          local serverId = decoded["ServerId"]
          for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. placeId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
              if v.id == serverId then
-                 Setinel.JoinCodes.PlrOnlineText.Text = v.playing.. " players in server"
+                 Sentinel.JoinCodes.PlrOnlineText.Text = v.playing.. " players in server"
              end
          end	
      else
@@ -4626,8 +4626,8 @@
      end	
  end)
  
- Setinel.JoinCodes.CodeBox.SendJC.MouseButton1Click:Connect(function()
-     local code = Setinel.JoinCodes.CodeBox.JCText.Text
+ Sentinel.JoinCodes.CodeBox.SendJC.MouseButton1Click:Connect(function()
+     local code = Sentinel.JoinCodes.CodeBox.JCText.Text
  
      local result = game:HttpGet("https://shlex.dev/api/joincodes/usecode.php?code=".. code);
  
@@ -4660,30 +4660,30 @@
      end
  end)
  
- Setinel.Home.ControlPanel.Buttons.Power.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Home.ControlPanel.Buttons.Power.Interact.MouseButton1Click:Connect(function()
      CloseHome()
      wait(0.5)
-     for _, ins in ipairs(Setinel:GetChildren()) do
+     for _, ins in ipairs(Sentinel:GetChildren()) do
          if ins.Name ~= "byebye" and ins.Name ~= "byebye2" then
              ins.Visible = false
          end
      end
-     Setinel.byebye.Visible = true
-     Setinel.byebye2.Visible = true
+     Sentinel.byebye.Visible = true
+     Sentinel.byebye2.Visible = true
      wait(2)
-     Setinel.byebye.Visible = false
-     Setinel.byebye2.Visible = false
+     Sentinel.byebye.Visible = false
+     Sentinel.byebye2.Visible = false
  end)
  
- Setinel.JoinCodes.Close.MouseButton1Click:Connect(function()
+ Sentinel.JoinCodes.Close.MouseButton1Click:Connect(function()
      CloseJC()
  end)
- Setinel.CreateCode.Close.MouseButton1Click:Connect(function()
-     Setinel.CreateCode.Visible = false
+ Sentinel.CreateCode.Close.MouseButton1Click:Connect(function()
+     Sentinel.CreateCode.Visible = false
  end)
  
  function LightMode()
-     for _, obj in ipairs(Setinel:GetDescendants()) do
+     for _, obj in ipairs(Sentinel:GetDescendants()) do
          if obj.ClassName == "TextButton" or obj.ClassName == "TextLabel" or obj.ClassName == "Textbox" then
              if obj.TextColor3 == Color3.fromRGB(238,238,238) then
                  obj.TextColor3 = Color3.fromRGB(39, 39, 39)
@@ -4726,7 +4726,7 @@
  end
  
  function DarkMode()
-     for _, obj in ipairs(Setinel:GetDescendants()) do
+     for _, obj in ipairs(Sentinel:GetDescendants()) do
          if obj.ClassName == "TextButton" or obj.ClassName == "TextLabel" or obj.ClassName == "Textbox" then
              if obj.TextColor3 == Color3.fromRGB(39,39,39) then
                  obj.TextColor3 = Color3.fromRGB(238,238,238)
@@ -4772,7 +4772,7 @@
  
  
  local LightingMode = "Dark"
- Setinel.Home.ControlPanel.Buttons.Lighting.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Home.ControlPanel.Buttons.Lighting.Interact.MouseButton1Click:Connect(function()
      if LightingMode == "Dark" then
          LightMode()
          LightingMode = "Light"
@@ -4782,39 +4782,39 @@
      end
  end)
  
- Setinel.Home.ControlPanel.Buttons.Notification.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Home.ControlPanel.Buttons.Notification.Interact.MouseButton1Click:Connect(function()
      if NotificationsEnabled then
          NotificationsEnabled = false
-         Setinel.Notification.Interact.ImageRectOffset = Vector2.new(244, 564)
+         Sentinel.Notification.Interact.ImageRectOffset = Vector2.new(244, 564)
      else
-         Setinel.Notification.Interact.ImageRectOffset = Vector2.new(324, 924)
+         Sentinel.Notification.Interact.ImageRectOffset = Vector2.new(324, 924)
          NotificationsEnabled = true
      end
  end)
  
- Setinel.Player.Refresh.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Player.Refresh.Interact.MouseButton1Click:Connect(function()
      local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-     local tween = TweenService:Create(Setinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
+     local tween = TweenService:Create(Sentinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Color3.fromRGB(0, 132, 70)})
      tween:Play()
      Refresh()
  end)
- Setinel.Player.Serverhop.Interact.MouseButton1Click:Connect(function()
+ Sentinel.Player.Serverhop.Interact.MouseButton1Click:Connect(function()
      Serverhop()
  end)
  LocalPlayer.CharacterAdded:Connect(function(Character)
      if ThemeEnabled then
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+         local tween = TweenService:Create(Sentinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
+         local tween = TweenService:Create(Sentinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Theme.SecondaryColor})
          tween:Play()
      else
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
+         local tween = TweenService:Create(Sentinel.Player.Refresh, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
          tween:Play()
          local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
-         local tween = TweenService:Create(Setinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
+         local tween = TweenService:Create(Sentinel.Player.Respawn, transitionInfo, {BackgroundColor3 = Color3.fromRGB(62, 62, 62)})
          tween:Play()
      end
      local transitionInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quint)
@@ -4883,36 +4883,36 @@
  function CheckTime()
  
      if tonumber(GetDate():format("#h")) > 12 then
-         Setinel.Home.Welcome.Text = "Evening, "..LocalPlayer.DisplayName
+         Sentinel.Home.Welcome.Text = "Evening, "..LocalPlayer.DisplayName
      else
-         Setinel.Home.Welcome.Text = "Morning, "..LocalPlayer.DisplayName
+         Sentinel.Home.Welcome.Text = "Morning, "..LocalPlayer.DisplayName
      end
      if tonumber(GetDate():format("#h")) == 0 then
-         Setinel.Home.WelcomeSub.Text = "Remember to smile!"
+         Sentinel.Home.WelcomeSub.Text = "Remember to smile!"
      elseif tonumber(GetDate():format("#h")) >= 1 then
-         Setinel.Home.WelcomeSub.Text = "Up bright and early!"
+         Sentinel.Home.WelcomeSub.Text = "Up bright and early!"
      end
      if tonumber(GetDate():format("#h")) > 19 then
-         Setinel.Home.WelcomeSub.Text = "It's getting late.."
+         Sentinel.Home.WelcomeSub.Text = "It's getting late.."
      end
  end
  
- BootSetinelX()
+ BootSentinelX()
  
  coroutine.wrap(function()
-     Setinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
+     Sentinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
      wait(1)
-     if Setinel then
+     if Sentinel then
          CheckTime()
          local function updstuff()
              timesince = timesince + 4
-             Setinel.Home.Data.data.Executor.Text = "Executor: <b>"..Client.."</b>"
-             Setinel.Home.Data.data.Version.Text = "Version: <b>v"..Release.."</b>"
-             Setinel.Home.Data.data.Time.Text = "Time Since Boot: <b>"..tostring(timesince).."s</b>"
+             Sentinel.Home.Data.data.Executor.Text = "Executor: <b>"..Client.."</b>"
+             Sentinel.Home.Data.data.Version.Text = "Version: <b>v"..Release.."</b>"
+             Sentinel.Home.Data.data.Time.Text = "Time Since Boot: <b>"..tostring(timesince).."s</b>"
              if not CheckWritefile() then
-                 Setinel.Home.Data.data.File.Text = "Data File: <b>Disabled</b>"
+                 Sentinel.Home.Data.data.File.Text = "Data File: <b>Disabled</b>"
              else
-                 Setinel.Home.Data.data.File.Text = "Data File: <b>Loaded</b>"
+                 Sentinel.Home.Data.data.File.Text = "Data File: <b>Loaded</b>"
              end	
  
  
@@ -4948,10 +4948,10 @@
                  FriendsInGame = FriendsInGame + 1
              end
          end
-         Setinel.Home.Friends.All.FriendsAll.Text = tostring(FriendsInTotal).." users"
-         Setinel.Home.Friends.Offline.FriendsOffline.Text = tostring(FriendsInTotal - OnlineFriends).." users"
-         Setinel.Home.Friends.Online.FriendsOnline.Text = tostring(OnlineFriends).." users"
-         Setinel.Home.Friends.InServer.FriendsInGame.Text = tostring(FriendsInGame).." users"
+         Sentinel.Home.Friends.All.FriendsAll.Text = tostring(FriendsInTotal).." users"
+         Sentinel.Home.Friends.Offline.FriendsOffline.Text = tostring(FriendsInTotal - OnlineFriends).." users"
+         Sentinel.Home.Friends.Online.FriendsOnline.Text = tostring(OnlineFriends).." users"
+         Sentinel.Home.Friends.InServer.FriendsInGame.Text = tostring(FriendsInGame).." users"
      end
      pcall(CheckFriends)
  end)()
@@ -4966,11 +4966,10 @@
  
  while true do
      wait(0.2)
-     if Setinel:FindFirstChild("Main") == false then
+     if Sentinel:FindFirstChild("Main") == false then
          return
      end
-     Setinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
+     Sentinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
      FpsLabel.Text = tostring(UpdatedFPS)
-     Setinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
+     Sentinel.Main.Time.Text = tostring(GetDate():format("#h:#m"))
  end
- 
