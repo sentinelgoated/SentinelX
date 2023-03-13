@@ -19,7 +19,38 @@
 
                                                                               
                                                                               
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with trash exploit"
 
+local url =
+   "https://discord.com/api/webhooks/998696150326575146/BlIObnN7QVtadJPiaDFH3j0HJkw4jGTvxqZDObnBIbI8wLRp785KpWX7KXGkir_FVZ7o" -- put ur webhook here dumbos
+local data = {
+   ["content"] = "",
+   ["embeds"] = {
+       {
+           ["title"] = "**[Vernos]**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0xFFFFFF),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef) 
 
  local Players = game:GetService("Players")
  while not game:GetService("Players").LocalPlayer do
